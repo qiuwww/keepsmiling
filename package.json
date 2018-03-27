@@ -1,0 +1,26 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "utils",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "config": {
+    "port": "6000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moonbreezee/utils.git"
+  },
+  "author": "qiu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moonbreezee/utils/issues"
+  },
+  "homepage": "https://github.com/moonbreezee/utils",
+  "devDependencies": {
+    "open-browser-webpack-plugin": "0.0.5",
+    "webpack": "^4.3.0"
+  }
+}
