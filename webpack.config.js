@@ -5,11 +5,13 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtracTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
 	// 入口文件
 	entry: {
-		om: path.resolve(__dirname, 'src/index.js')
+		index: './src/index.js',
+		om: './src/om.js'
 	},
 	// 输出控制
 	output: {
@@ -22,13 +24,14 @@ module.exports = {
 	},
 	// 处理模块
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader'
-				}
+				},
+				include: path.resolve(__dirname, './src/')
 			},
 			{
 				test: /\.css|\.styl$/,
@@ -63,11 +66,11 @@ module.exports = {
 		// 		return module.context && module.context.indexOf('node_modules') !== -1;
 		// 	}
 		// }),
-		// new ExtracTextPlugin('css/' + projectName + '/[name].css'),
+		// new ExtracTextPlugin('css/[name].css'),
 		// new HtmlWebpackPlugin({
-		//     template: path.resolve(__dirname, 'read.html'),
-		//     filename: '123.html',
-		//     chunks: [index]
+		//     template: path.resolve(__dirname, 'page/index.html'),
+		//     filename: 'page/index.html',
+		//     chunks: ['om']
 		//   })
 	],
 	resolve: {
@@ -76,5 +79,7 @@ module.exports = {
 	externals: {
 		'mock': 'window.Mock',
 		'jquery': 'window.jQuery', // 用于文件直接页面引入，在需要使用的js中，需要 let $ = require('jquery');
-	}
+	},
+	// source-map 
+	devtool: "source-map"
 }

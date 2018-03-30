@@ -33,6 +33,9 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -60,22 +63,60 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 365);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 365:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-// index.js
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.isEmpetyObj = undefined;
+
+var _index = __webpack_require__(1);
+
+console.log(123123); // index.js
 // 总入口
 
-console.log(123123);
+
+(0, _index.isEmpetyObj)();
+
+exports.isEmpetyObj = _index.isEmpetyObj;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+
+var isEmpetyObj = function isEmpetyObj(obj) {
+  console.log("0000");
+};
+
+exports.isEmpetyObj = isEmpetyObj;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _index = __webpack_require__(0);
+
+(0, _index.isEmpetyObj)(); // om.js
 
 /***/ })
-
-/******/ });
+/******/ ]);
+//# sourceMappingURL=om.js.map
