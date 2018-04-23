@@ -4,7 +4,7 @@
   "description": "utils",
   "main": "src/index.js",
   "scripts": {
-    "build": "node ./node_modules/webpack/bin/webpack.js --config webpack.config.js --color --progress",
+    "build": "node ./node_modules/webpack/bin/webpack.js --config webpack.config.js --color --progress &&  node ./node_modules/webpack/bin/webpack.js --config webpack.config.js --color --progress -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "config": {

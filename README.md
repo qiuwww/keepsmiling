@@ -29,7 +29,7 @@ utils webpack modules
 
     "plugins": ["transform-runtime"],
   "comments": true
-## 指令写错，先写误了大事
+## 指令写错，险些误了大事
 指定当前编译依靠的配置文件：
 ```
 --config webpack.config.js
