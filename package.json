@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/moonbreezee/om-utils.git"
+    "url": "https://github.com/moonbreezee/keepsmiling.git"
   },
   "author": "qiu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/moonbreezee/utils/issues"
   },
-  "homepage": "https://github.com/moonbreezee/om-utils",
+  "homepage": "https://github.com/moonbreezee/keepsmiling",
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
