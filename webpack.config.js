@@ -10,8 +10,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
 	// 入口文件
 	entry: {
-		index: './src/index.js',
-		om: './src/om.js'
+		index: './src/index.js'
 	},
 	// 输出控制
 	output: {
