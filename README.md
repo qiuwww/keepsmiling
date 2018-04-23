@@ -35,3 +35,16 @@ utils webpack modules
 --config webpack.config.js
 ```
     "build": "node ./node_modules/webpack/bin/webpack.js --config webpack.config.js --color --progress -p",
+
+
+## lib文件夹保存发布的内容
+
+
+## 包发布
+
+```
+npm login
+
+npm publish
+```
+
