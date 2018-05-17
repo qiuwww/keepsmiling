@@ -1,0 +1,24 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h2>keepsmiling</h2>
+	<ul class="func">
+		
+	</ul>
+	<script type="text/javascript" src="/devserver/keepsmiling.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			var keys = Object.keys(keepsmiling);
+			var lis = keys.map(item => {
+				return `<li>${item}</li>`;
+			});
+			document.querySelector('.func').innerHTML = lis.join('');
+		}
+	</script>
+</body>
+</html>

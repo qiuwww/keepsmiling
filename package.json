@@ -1,0 +1,48 @@
+{
+  "name": "keepsmiling",
+  "version": "1.0.1",
+  "description": "utils",
+  "main": "lib/keepsmiling.min.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./scripts/webpack.dev.config.js --color",
+    "build": "cross-env NODE_ENV=prod node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color",
+    "dep": "cross-env NODE_ENV=dep node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color",
+    "test": "npm run dep && node ./node_modules/karma/bin/karma start ./scripts/karma.conf.js",
+    "eslint": "node ./node_modules/eslint/bin/eslint.js lib/is/*.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moonbreezee/keepsmiling.git"
+  },
+  "author": "moonbreezee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moonbreezee/keepsmiling/issues"
+  },
+  "homepage": "https://github.com/moonbreezee/keepsmiling",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.1.4",
+    "eslint": "^4.19.1",
+    "eslint-plugin-node": "^6.0.1",
+    "express": "^4.16.3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "karma": "^2.0.2",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-power-assert": "^1.0.0",
+    "mocha": "^5.1.1",
+    "opn": "^5.3.0",
+    "power-assert": "^1.4.4",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.2",
+    "webpack-merge": "^4.1.2"
+  }
+}
