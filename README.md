@@ -82,3 +82,5 @@ npm包实际是一个存档文件，即一个目录直接打包为.zip或tar.gz�
 6. makefile方便我们用make test进行测试
 7. README.md是此module的描述和使用方法
 
+## 包地址
+https://www.npmjs.com/package/keepsmiling
