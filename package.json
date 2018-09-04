@@ -1,8 +1,8 @@
 {
   "name": "keepsmiling",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "utils",
-  "main": "lib/keepsmiling.min.js",
+  "main": "dist/keepsmiling.min.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./scripts/webpack.dev.config.js --color",
     "build": "cross-env NODE_ENV=prod node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color",

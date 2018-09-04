@@ -9,22 +9,22 @@ const name = process.env.npm_package_name;
 const packageConfig = require('../package.json');
 
 module.exports = {
-	entry: {
-		name: path.resolve(__dirname, '../lib/index.js')
-	},
-	module: {
-		rules: [
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				use: {
-					loader: 'babel-loader?cacheDirectory'
-				},
-				include: path.resolve(__dirname, '../lib/')
-			}
-		]
-	},
-	resolve: {
-		extensions: ['.js']
-	}
+  entry: {
+    name: path.resolve(__dirname, '../lib/index.js')
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader?cacheDirectory'
+        },
+        include: path.resolve(__dirname, '../lib/')
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.js']
+  }
 }
