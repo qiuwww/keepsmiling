@@ -85,18 +85,14 @@ npm包实际是一个存档文件，即一个目录直接打包为.zip或tar.gz�
 ## 包地址
 https://www.npmjs.com/package/keepsmiling
 
-
 ## 单个函数 需要包括如下
-
 1. 函数注释
 2. 关键点的说明
 3. 使用举例，写在test内
 
-
 ## 开发过程说明  blog
-
 
 ## JSDoc生成文档的操作
 JSDoc官网：https://www.css88.com/doc/jsdoc/index.html
 jsdoc的配置文档的地址：https://www.css88.com/doc/jsdoc/about-configuring-jsdoc.html
-生成文档的线上访问地址：https://github.com/moonbreezee/keepsmiling/docs/index.html
+生成文档的线上访问地址：http://htmlpreview.github.io/?https://github.com/moonbreezee/keepsmiling/blob/master/docs/index.html

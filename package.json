@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "utils",
   "main": "dist/keepsmiling.min.js",
-  "docs": "https://github.com/moonbreezee/keepsmiling/docs/index.html",
+  "docs": "http://htmlpreview.github.io/?https://github.com/moonbreezee/keepsmiling/blob/master/docs/index.html",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./scripts/webpack.dev.config.js --color",
     "build": "cross-env NODE_ENV=prod node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color",
