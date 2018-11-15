@@ -1,14 +1,16 @@
 {
   "name": "keepsmiling",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "utils",
   "main": "dist/keepsmiling.min.js",
+  "docs": "https://github.com/moonbreezee/keepsmiling/docs/index.html",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./scripts/webpack.dev.config.js --color",
     "build": "cross-env NODE_ENV=prod node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color",
     "dep": "cross-env NODE_ENV=dep node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color",
+    "jsdoc": "jsdoc lib/index.js -c ./scripts/jsdoc.conf.json -R README.md -r",
     "test": "npm run dep && node ./node_modules/karma/bin/karma start ./scripts/karma.conf.js",
-    "eslint": "node ./node_modules/eslint/bin/eslint.js lib/is/*.js --fix"
+    "eslint": "node ./node_modules/eslint/bin/eslint.js lib/** --fix"
   },
   "repository": {
     "type": "git",
