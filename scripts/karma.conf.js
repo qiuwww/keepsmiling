@@ -10,6 +10,7 @@ module.exports = function (config) {
     // 选择测试框架
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+    // 一直都是使用mocha测试框架结合断言库（如should.js，chai，expect.js等）进行BDD单体测试的。
     frameworks: ["mocha", "power-assert"],
 
     // 告诉需要执行的测试用例的代码路径，支持正则

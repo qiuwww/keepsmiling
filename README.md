@@ -96,3 +96,23 @@ https://www.npmjs.com/package/keepsmiling
 JSDoc官网：https://www.css88.com/doc/jsdoc/index.html
 jsdoc的配置文档的地址：https://www.css88.com/doc/jsdoc/about-configuring-jsdoc.html
 生成文档的线上访问地址：http://htmlpreview.github.io/?https://github.com/moonbreezee/keepsmiling/blob/master/docs/index.html
+
+
+## eslint配置
+### 规则
+```
+no-useless-escape 不允许在字符串和正则表达式中使用无意义的换行符
+"no-useless-escape": "off",
+```
+
+## test（BDD测试，Behavior Driven Development）
+测试脚手架：karam 
+测试框架：mocha
+断言库：power-assert
+
+### 断言语法
+1. 如下判断第一个参数是否为真，`assert`与`assert.ok`一个意思，后边的信息是在第一个参数为假的时候展示的。
+```
+assert(keepsmiling.isEmptyObject({}) == false, 'THIS IS AN ASSERTION MESSAGE');
+```
+2. 需要判断为false，就使用
