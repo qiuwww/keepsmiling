@@ -105,7 +105,7 @@ no-useless-escape 不允许在字符串和正则表达式中使用无意义的�
 "no-useless-escape": "off",
 ```
 
-## test（BDD测试，Behavior Driven Development）
+## 单体测试test（BDD测试，Behavior Driven Development）
 测试脚手架：karam 
 测试框架：mocha
 断言库：power-assert
@@ -115,4 +115,4 @@ no-useless-escape 不允许在字符串和正则表达式中使用无意义的�
 ```
 assert(keepsmiling.isEmptyObject({}) == false, 'THIS IS AN ASSERTION MESSAGE');
 ```
-2. 需要判断为false，就使用
+2. 需要判断为false，就使用assert.notEu
