@@ -1,7 +1,8 @@
 {
   "name": "keepsmiling",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "utils",
+  "keywords": ["utils"],
   "main": "dist/keepsmiling.min.js",
   "doc": "http://htmlpreview.github.io/?https://github.com/moonbreezee/keepsmiling/blob/master/doc/index.html",
   "scripts": {

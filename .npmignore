@@ -2,6 +2,6 @@ coverage/
 doc/
 static/
 .editorconfig
-NOTE.md
+NOTES.md
 .travis.yml
 .eslintignore

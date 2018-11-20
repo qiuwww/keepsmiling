@@ -13,7 +13,7 @@ $ npm i 或者 yarn
 
 $ npm run dev
 ```
-更具体的说明：[NOTE](https://github.com/moonbreezee/keepsmiling/NOTE.md)
+更具体的说明：[NOTES](https://github.com/moonbreezee/keepsmiling/blob/master/NOTES.md)
 
 ## 使用
 ```
