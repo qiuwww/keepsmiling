@@ -4,11 +4,14 @@ const webpack = require("webpack");
 const baseWebpackConfig = require("./webpack.base.config.js");
 const merge = require("webpack-merge");
 const ExtracTextPlugin = require("extract-text-webpack-plugin");
+// eslint-disable-next-line no-undef
 const name = process.env.npm_package_name;
+// eslint-disable-next-line no-unused-vars
 const server = require("./devServer.js")();
 
 module.exports = merge(baseWebpackConfig, {
   output: {
+    // eslint-disable-next-line no-undef
     path: path.resolve(__dirname, "../devserver/"),
     // 访问 http://127.0.0.1:3002/devserver/keepsmiling.js
     publicPath: "/devserver/",
@@ -26,6 +29,7 @@ module.exports = merge(baseWebpackConfig, {
   devServer: {
     // 这边的流程是请求3002端口，代理page/index.html，其中的js文件再代理到开发代理
     // 告诉服务器从哪里提供内容。只有在你想要提供静态文件时才需要。devServer.publicPath 将用于确定应该从哪里提供 bundle，并且此选项优先。
+    // eslint-disable-next-line no-undef
     contentBase: path.join(__dirname, "../devserver"),
     hot: true,
     inline: true,

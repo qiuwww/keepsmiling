@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Module: format</title>
+    <title>JSDoc: Module: array</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Module: format</h1>
+    <h1 class="page-title">Module: array</h1>
 
     
 
@@ -64,17 +64,182 @@
     
 
     
-    <h4 class="name" id=".digitUppercase"><span class="type-signature">(static) </span>digitUppercase<span class="signature">(n)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    <h4 class="name" id=".arrayAverage"><span class="type-signature">(static) </span>arrayAverage<span class="signature">(arr)</span><span class="type-signature"> &rarr; {number}</span></h4>
     
 
     
-    <p class="summary"><p>现金额转大写</p>.</p>
+    <p class="summary"><p>获取数组的平均值</p>.</p>
     
 
 
 
 <div class="description">
-    <p>现金额转大写</p>
+    <p>获取数组的平均值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>输入数组</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array.js.html">array.js</a>, <a href="array.js.html#line14">line 14</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回数组的平均值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayAverage([1,2,3]);
+// returns 2</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".arrayFibonacci"><span class="type-signature">(static) </span>arrayFibonacci<span class="signature">(n)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Array.reduce（）向数组中添加值，后面的一个数等于前面两个数相加之和（前两个除外）。</p></p>
+    
+
+
+
+<div class="description">
+    <p>斐波那契数组</p>
 </div>
 
 
@@ -126,7 +291,7 @@
 
             
 
-            <td class="description last"><p>金额</p></td>
+            <td class="description last"><p>创建一个特定长度的空数组，初始化前两个值（0和1）。</p></td>
         </tr>
 
     
@@ -167,162 +332,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="format.js.html">format.js</a>, <a href="format.js.html#line9">line 9</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">String</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id=".formatPassTime"><span class="type-signature">(static) </span>formatPassTime<span class="signature">(startTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
-    
-
-    
-    <p class="summary"><p>格式化${startTime}距现在的已过时间</p>.</p>
-    
-
-
-
-<div class="description">
-    <p>格式化${startTime}距现在的已过时间</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>startTime</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Date</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>现在的时间，格式是距今的毫秒数, 或者字符串型的描述</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="format.js.html">format.js</a>, <a href="format.js.html#line49">line 49</a>
+        <a href="array.js.html">array.js</a>, <a href="array.js.html#line31">line 31</a>
     </li></ul></dd>
     
 
@@ -349,9 +359,7 @@
 
         
 <div class="param-desc">
-    <ul>
-<li>返回一段描述的语句</li>
-</ul>
+    <p>返回斐波那契数组的指定长度</p>
 </div>
 
 
@@ -362,7 +370,7 @@
     </dt>
     <dd>
         
-<span class="param-type">String</span>
+<span class="param-type">Array</span>
 
 
     </dd>
@@ -375,8 +383,8 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>formatPassTime('2018/12/12'); // 默认是时间对应的格式
-formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
+    <pre class="prettyprint"><code>arrayFibonacci(5)
+// returns [0,1,1,2,3]</code></pre>
 
 
 
@@ -386,17 +394,17 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
     
 
     
-    <h4 class="name" id=".formatRemainTime"><span class="type-signature">(static) </span>formatRemainTime<span class="signature">(endTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    <h4 class="name" id=".arrayMax"><span class="type-signature">(static) </span>arrayMax<span class="signature">(arr)</span><span class="type-signature"> &rarr; {Nummber}</span></h4>
     
 
     
-    <p class="summary"><p>格式化现在距${endTime}的剩余时间</p>.</p>
+    <p class="summary"><p>使用Math.max（）与spread运算符（...）结合得到数组中的最大值。</p></p>
     
 
 
 
 <div class="description">
-    <p>格式化现在距${endTime}的剩余时间</p>
+    <p>从数组中获取最大值</p>
 </div>
 
 
@@ -432,13 +440,13 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
 
         <tr>
             
-                <td class="name"><code>endTime</code></td>
+                <td class="name"><code>arr</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Date</span>
+<span class="param-type">Array</span>
 
 
             
@@ -448,7 +456,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
 
             
 
-            <td class="description last"><p>剩余时间的截止日期</p></td>
+            <td class="description last"><p>传入的数组，通过...运算，展开为一组数</p></td>
         </tr>
 
     
@@ -489,185 +497,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="format.js.html">format.js</a>, <a href="format.js.html#line70">line 70</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">String</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id=".thousandsSeparator"><span class="type-signature">(static) </span>thousandsSeparator<span class="signature">(num, fixNum)</span><span class="type-signature"> &rarr; {string}</span></h4>
-    
-
-    
-    <p class="summary"><p>添加千分位，顺便固定小数位</p>.</p>
-    
-
-
-
-<div class="description">
-    <p>添加千分位，顺便固定小数位</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>num</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>数值型的值</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>fixNum</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>保留的小数位</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="format.js.html">format.js</a>, <a href="format.js.html#line96">line 96</a>
+        <a href="array.js.html">array.js</a>, <a href="array.js.html#line45">line 45</a>
     </li></ul></dd>
     
 
@@ -694,9 +524,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
 
         
 <div class="param-desc">
-    <ul>
-<li>返回结果字符串</li>
-</ul>
+    <p>返回当前数组的最大值</p>
 </div>
 
 
@@ -707,7 +535,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
     </dt>
     <dd>
         
-<span class="param-type">string</span>
+<span class="param-type">Nummber</span>
 
 
     </dd>
@@ -720,8 +548,8 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>thousandsSeparator(123123123.4513212, 2);
-// returns "123,123,123.45"</code></pre>
+    <pre class="prettyprint"><code>arrayMax([10, 1, 5]);
+// returns 10</code></pre>
 
 
 
@@ -731,17 +559,17 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
     
 
     
-    <h4 class="name" id=".trim"><span class="type-signature">(static) </span>trim<span class="signature">(str)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    <h4 class="name" id=".arrayMin"><span class="type-signature">(static) </span>arrayMin<span class="signature">(arr)</span><span class="type-signature"> &rarr; {Nummber}</span></h4>
     
 
     
-    <p class="summary"><p>去除字符串两端的空格</p>.</p>
+    <p class="summary"><p>使用Math.min（）与 spread运算符（...）结合得到数组中的最大值。</p></p>
     
 
 
 
 <div class="description">
-    <p>去除字符串两端的空格</p>
+    <p>从数组中获取最小值</p>
 </div>
 
 
@@ -777,13 +605,13 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
 
         <tr>
             
-                <td class="name"><code>str</code></td>
+                <td class="name"><code>arr</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">Array</span>
 
 
             
@@ -793,7 +621,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
 
             
 
-            <td class="description last"><p>字符串</p></td>
+            <td class="description last"><p>传入的数组，或者类数组</p></td>
         </tr>
 
     
@@ -834,7 +662,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="format.js.html">format.js</a>, <a href="format.js.html#line108">line 108</a>
+        <a href="array.js.html">array.js</a>, <a href="array.js.html#line56">line 56</a>
     </li></ul></dd>
     
 
@@ -861,7 +689,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
 
         
 <div class="param-desc">
-    <p>返回一个字符串</p>
+    <p>返回当前数组的最小值</p>
 </div>
 
 
@@ -872,7 +700,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
     </dt>
     <dd>
         
-<span class="param-type">String</span>
+<span class="param-type">Nummber</span>
 
 
     </dd>
@@ -881,6 +709,12 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
     
 
 
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayMin([10, 1, 5])
+// returns 1</code></pre>
 
 
 
@@ -906,7 +740,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Nov 15 2018 14:22:08 GMT+0800 (CST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Nov 20 2018 18:12:28 GMT+0800 (CST)
 </footer>
 
 <script> prettyPrint(); </script>

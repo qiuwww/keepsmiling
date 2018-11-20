@@ -1,0 +1,7 @@
+coverage/
+doc/
+static/
+.editorconfig
+NOTE.md
+.travis.yml
+.eslintignore

@@ -2,9 +2,5 @@
 # 是一个YAML文件，关于node.js相关的配置
 language: node_js
 node_js:
-   - "0.10"
-   - "0.8"
-   - "4.0"
+   - "6.0"
 services:
-   -
-# 这个例子的是让travis在node.js的0.6.x，0.8.x，0.10.x三个版本下对项目进行测试，并且需要mongodb的服务。

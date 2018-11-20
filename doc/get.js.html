@@ -29,28 +29,28 @@
             <pre class="prettyprint source linenums"><code>/**
  * @module get
  */
-import { isPrime } from './is.js';
+import { isPrime } from "./is.js";
 /**
  * @desc 获取当前页面的url中的查询参数
  * @param {String} key - 需要获取的简值对的key
  * @return {Function}
  */
 export const getQueryString = (key) => {
-  var reg = new RegExp("(^|&amp;)" + key + "=([^&amp;]*)(&amp;|$)");
-  var r = window.location.search.substr(1).match(reg);
+  const reg = new RegExp("(^|&amp;)" + key + "=([^&amp;]*)(&amp;|$)");
+  const r = window.location.search.substr(1).match(reg);
   if (r != null) {
     return unescape(r[2]);
   }
   return null;
-}
+};
 
 /**
  * @desc 获取浏览器类型和版本
  * @return {String} 浏览器类型
  */
 export const getExplore = () => {
-  let sys = {};
-  let ua = navigator.userAgent.toLowerCase();
+  const sys = {};
+  const ua = navigator.userAgent.toLowerCase();
   let s;
   (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? sys.ie = s[1] :
     (s = ua.match(/msie ([\d\.]+)/)) ? sys.ie = s[1] :
@@ -60,30 +60,29 @@ export const getExplore = () => {
             (s = ua.match(/chrome\/([\d\.]+)/)) ? sys.chrome = s[1] :
               (s = ua.match(/version\/([\d\.]+).*safari/)) ? sys.safari = s[1] : 0;
   // 根据关系进行判断
-  if (sys.ie) return ('IE: ' + sys.ie)
-  if (sys.edge) return ('EDGE: ' + sys.edge)
-  if (sys.firefox) return ('Firefox: ' + sys.firefox)
-  if (sys.chrome) return ('Chrome: ' + sys.chrome)
-  if (sys.opera) return ('Opera: ' + sys.opera)
-  if (sys.safari) return ('Safari: ' + sys.safari)
-  return 'Unkonwn'
-}
+  if (sys.ie) return ("IE: " + sys.ie);
+  if (sys.edge) return ("EDGE: " + sys.edge);
+  if (sys.firefox) return ("Firefox: " + sys.firefox);
+  if (sys.chrome) return ("Chrome: " + sys.chrome);
+  if (sys.opera) return ("Opera: " + sys.opera);
+  if (sys.safari) return ("Safari: " + sys.safari);
+  return "Unkonwn";
+};
 
 /**
  * @desc 获取操作系统类型
  * @return {String} 操作系统类型
  */
 export const getOS = () => {
-  var userAgent = 'navigator' in window &amp;&amp; 'userAgent' in navigator &amp;&amp; navigator.userAgent.toLowerCase() || '';
-  var vendor = 'navigator' in window &amp;&amp; 'vendor' in navigator &amp;&amp; navigator.vendor.toLowerCase() || '';
-  var appVersion = 'navigator' in window &amp;&amp; 'appVersion' in navigator &amp;&amp; navigator.appVersion.toLowerCase() || '';
-  if (/mac/i.test(appVersion)) return 'MacOSX';
-  if (/win/i.test(appVersion)) return 'windows';
-  if (/linux/i.test(appVersion)) return 'linux';
-  if (/iphone/i.test(userAgent) || /ipad/i.test(userAgent) || /ipod/i.test(userAgent)) 'ios';
-  if (/android/i.test(userAgent)) return 'android';
-  if (/win/i.test(appVersion) &amp;&amp; /phone/i.test(userAgent)) return 'windowsPhone';
-}
+  const userAgent = "navigator" in window &amp;&amp; "userAgent" in navigator &amp;&amp; navigator.userAgent.toLowerCase() || "";
+  const appVersion = "navigator" in window &amp;&amp; "appVersion" in navigator &amp;&amp; navigator.appVersion.toLowerCase() || "";
+  if (/mac/i.test(appVersion)) return "MacOSX";
+  if (/win/i.test(appVersion)) return "windows";
+  if (/linux/i.test(appVersion)) return "linux";
+  if (/iphone/i.test(userAgent) || /ipad/i.test(userAgent) || /ipod/i.test(userAgent)) "ios";
+  if (/android/i.test(userAgent)) return "android";
+  if (/win/i.test(appVersion) &amp;&amp; /phone/i.test(userAgent)) return "windowsPhone";
+};
 
 /**
  * @description 获取滚动位置
@@ -112,9 +111,9 @@ export const getScrollPos = (el = window) => ({
  */
 
 export const timeTaken = callback => {
-  console.time('timeTaken');
+  console.time("timeTaken");
   const r = callback();
-  console.timeEnd('timeTaken');
+  console.timeEnd("timeTaken");
   return r;
 };
 
@@ -141,22 +140,25 @@ export const turnToStackoverflow = (func, context) => {
 
 /**
  * 解析url为一个对象
+ * 这里的port比一般的对一个分号，如果要去掉需要单独处理
  * @param {Url} url - 需要解析的url
  * @return {Object} - 返回解析结果的对象
  * @example
- * var res = parseUrl('http://baidu.com:80/abd?id=123&amp;&amp;title=123213#521');
+ * var res = parseUrl('http://baidu.com:80/abd?id=123&amp;title=123213#521');
  * console.log(res);
  * // return abject
  */
 export function parseUrl(url) {
-  let result = {};
-  const keys = ['href', 'origin', 'protocol', 'host', 'hostname', 'port', 'pathname', 'search', 'hash'];
+  const result = {};
+  const keys = ["href", "origin", "protocol", "host", "hostname", "port", "pathname", "search", "hash"];
   const regexp = /(([^:]+:)\/\/(([^:\/\?#]+)(:\d+)?))(\/[^?#]*)?(\?[^#]*)?(#.*)?/;
   const match = regexp.exec(url);
   if (match) {
-    for (var i = keys.length - 1; i >= 0; i--) {
-      result[keys[i]] = match[i] ? match[i] : ' ';
+    for (let i = keys.length - 1; i >= 0; i--) {
+      result[keys[i]] = match[i] ? match[i] : "";
     }
+    // 单独处理port
+    result["port"] = result["port"].substr(1);
   }
   return result;
 }
@@ -171,7 +173,7 @@ export function parseUrl(url) {
  * // return [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
  */
 export function getPrime(str, end) {
-  let res = [];
+  const res = [];
   for (let i = str; i &lt;= end; i++) {
     if (isPrime(i)) {
       res.push(i);
@@ -198,7 +200,7 @@ export function getPrime(str, end) {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Nov 15 2018 14:22:08 GMT+0800 (CST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Nov 20 2018 18:12:28 GMT+0800 (CST)
 </footer>
 
 <script> prettyPrint(); </script>

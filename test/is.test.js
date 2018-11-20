@@ -25,11 +25,11 @@ describe('is Module:', function () {
     });
   });
   describe('#isIdCard()', function () {
-    it(`keepsmiling.isIdCard('320523197309040018') should return true`, function () {
-      assert(keepsmiling.isIdCard('320523197309040018'));
+    it(`keepsmiling.isIdCard('320523197309040018')['pass'] should return true`, function () {
+      assert(keepsmiling.isIdCard('320523197309040018')['pass']);
     });
-    it(`keepsmiling.isIdCard('3205231973090401X') should return false`, function () {
-      assert(keepsmiling.isIdCard('3205231973090401X') === false);
+    it(`keepsmiling.isIdCard('3205231973090401X')['pass'] should return false`, function () {
+      assert(keepsmiling.isIdCard('3205231973090401X')['pass'] === false);
     });
   });
 });
