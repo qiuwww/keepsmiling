@@ -1,4 +1,4 @@
-describe('Object API:', function () {
+describe('Object Module:', function () {
     describe('#deepClone()', function () {
         it(`person deepEqual keepsmiling.deepClone(null) should return true`, function () {
             let person = null

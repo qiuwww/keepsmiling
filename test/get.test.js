@@ -1,22 +1,19 @@
-// describe('letious types', function () {
-//   function Person(name, age) {
-//     this.name = name;
-//     this.age = age;
-//   }
 
-//   beforeEach(function () {
-//     this.types = [
-//       'string', 98.6, true, false, null, undefined,
-//       ['nested', 'array'],
-//       { object: true },
-//       NaN, Infinity,
-//       /^not/,
-//       new Person('alice', 3)
-//     ];
-//   });
-//   it('demo', function () {
-//     let index = this.types.length - 1,
-//       bob = new Person('bob', 5);
-//     assert(this.types[index].name === bob.name);
-//   });
-// });
+describe("get Module: ", () => {
+  describe("#parseUrl()", () => {
+    let urlObj = keepsmiling.parseUrl('http://baidu.com:80/abd?id=123&&title=123213#521');
+    it("urlObj should return abject", function () {
+      assert(typeof urlObj === 'object');
+    });
+    it("urlObj.port should return '80", function () {
+      assert(urlObj.port === '80');
+    });
+  });
+  describe("#getPrime()", () => {
+    let primeArr = keepsmiling.getPrime(1, 1000);
+    it("primeArr[8] should return 23", function () {
+      assert.ok(primeArr[8] === 23);
+    });
+  });
+});
+
