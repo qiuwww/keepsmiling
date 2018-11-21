@@ -97,3 +97,6 @@ no-useless-escape 不允许在字符串和正则表达式中使用无意义的�
 
 ## 后续说明
 后续还要不断的完善
+
+[github地址](https://github.com/moonbreezee/keepsmiling.git)
+[npm上包地址](https://www.npmjs.com/package/keepsmiling)
