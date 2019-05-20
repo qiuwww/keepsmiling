@@ -1,3 +1,4 @@
+git checkout develop
 # 语法检查
 npm run eslint
 # 生成jsdoc
@@ -15,4 +16,5 @@ git commit -m "npm 发布，代码提交"
 git push
 git checkout master
 git merge develop
-git push origin feature/develop
+git push origin master
+git checkout develop
