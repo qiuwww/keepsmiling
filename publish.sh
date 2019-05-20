@@ -1,3 +1,4 @@
+git checkout master
 # 语法检查
 npm run eslint
 # 生成jsdoc
