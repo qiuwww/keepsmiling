@@ -9,10 +9,4 @@ npm login
 # moonbreezee
 # 发布代码
 npm publish
-# 提交代码
-git add *
-git commit -m "npm 发布，代码提交"
-git push
-git checkout master
-git merge develop
-git push origin feature/develop
+

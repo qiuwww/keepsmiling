@@ -36,6 +36,10 @@ import keepsmiling from "keepsmiling"; // ES6
 
 已全局注入`keepsmiling`与`ks`，可直接使用。
 
+## 构建说明
+
+[构建说明](https://github.com/moonbreezee/keepsmiling/blob/master/NOTES.md)
+
 ## 主要方法如下
 
 - version
@@ -95,3 +99,5 @@ import keepsmiling from "keepsmiling"; // ES6
 - stringCapitalizeEveryWord
 
 ## 查看文档
+
+[jsdoc 生成的文档](https://htmlpreview.github.io/?https://github.com/moonbreezee/keepsmiling/blob/master/doc/index.html)
