@@ -15,7 +15,7 @@
     "test": "npm run dep && node ./node_modules/karma/bin/karma start ./scripts/karma.conf.js",
     "eslint": "node ./node_modules/eslint/bin/eslint.js -c ./scripts/.eslintrc.js lib/** --fix",
     "publish": "push-master && sh publish.sh",
-    "push-master": "sh push-master"
+    "push-master": "sh push-master.sh"
   },
   "repository": {
     "type": "git",
