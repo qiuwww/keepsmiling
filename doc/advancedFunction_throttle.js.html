@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: random.js</title>
+    <title>JSDoc: Source: advancedFunction/throttle.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: random.js</h1>
+    <h1 class="page-title">Source: advancedFunction/throttle.js</h1>
 
     
 
@@ -27,30 +27,36 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @module random
- */
-/**
- * @description 生成随机的6位16进制颜色值
- * @returns {String} 返回一个#aabbcc的颜色值
+ * @desc throttle 函数节流，在延迟delay时间内，如果连续触发就重置一次的时间，d一次uration时间内只允许触发，合并了函数去抖动与函数节流
+ * @param {*} func 要处理的函数
+ * @param {*} delay 防抖动的时间
+ * @param {*} duration 节流的时间间隔
  * @example
- * randomColor();
- * // #aabbcc
+ * function scrollFn(){
+ *   console.log(1)
+ * }
+ * window.onscroll = throttle(scrollFn,100,500)
  */
-export function randomColor() {
-  return "#" + (~~(Math.random() * (1 &lt;&lt; 24))).toString(16);
-}
-
-/**
- * @description 返回一个[min, max]的数值
- * @param  {Number} min - 左边界，不传就是0
- * @param  {Number} max - 右边界，不传默认10000
- * @return {Number} 返回一个数值型的值
- * @example
- * randomNum(1,3);
- * // 1,2,3一个随机的数
- */
-export function randomNum(min = 0, max = Math.pow(2, 53) - 1) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+export function throttle(func, delay = 100, duration = 1500) {
+  if (typeof func !== "function") {
+    throw Error("throttle函数报错: 第一个参数需要是函数类型");
+  }
+  var timer = null;
+  var begin = new Date();
+  return function() {
+    var context = this,
+      args = arguments;
+    var current = new Date();
+    clearTimeout(timer);
+    if (current - begin >= duration) {
+      func.apply(context, args);
+      begin = current;
+    } else {
+      timer = setTimeout(function() {
+        func.apply(context, args);
+      }, delay);
+    }
+  };
 }
 </code></pre>
         </article>

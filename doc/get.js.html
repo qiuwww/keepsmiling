@@ -33,11 +33,13 @@ import { isPrime } from "./is.js";
 /**
  * @desc 获取当前页面的url中的查询参数
  * @param {String} key - 需要获取的简值对的key
+ * @param {String} str - 需要获取的地址，可以是url也可以是一段字符串
  * @return {Function}
  */
-export const getQueryString = (key) => {
+export const getQueryString = (str = "", key) => {
+  str = str.includes("?") ? str.split("?")[1] : str;
   const reg = new RegExp("(^|&amp;)" + key + "=([^&amp;]*)(&amp;|$)");
-  const r = window.location.search.substr(1).match(reg);
+  const r = str.match(reg);
   if (r != null) {
     return unescape(r[2]);
   }
@@ -52,20 +54,28 @@ export const getExplore = () => {
   const sys = {};
   const ua = navigator.userAgent.toLowerCase();
   let s;
-  (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? sys.ie = s[1] :
-    (s = ua.match(/msie ([\d\.]+)/)) ? sys.ie = s[1] :
-      (s = ua.match(/edge\/([\d\.]+)/)) ? sys.edge = s[1] :
-        (s = ua.match(/firefox\/([\d\.]+)/)) ? sys.firefox = s[1] :
-          (s = ua.match(/(?:opera|opr).([\d\.]+)/)) ? sys.opera = s[1] :
-            (s = ua.match(/chrome\/([\d\.]+)/)) ? sys.chrome = s[1] :
-              (s = ua.match(/version\/([\d\.]+).*safari/)) ? sys.safari = s[1] : 0;
+  (s = ua.match(/rv:([\d.]+)\) like gecko/))
+    ? (sys.ie = s[1])
+    : (s = ua.match(/msie ([\d\.]+)/))
+    ? (sys.ie = s[1])
+    : (s = ua.match(/edge\/([\d\.]+)/))
+    ? (sys.edge = s[1])
+    : (s = ua.match(/firefox\/([\d\.]+)/))
+    ? (sys.firefox = s[1])
+    : (s = ua.match(/(?:opera|opr).([\d\.]+)/))
+    ? (sys.opera = s[1])
+    : (s = ua.match(/chrome\/([\d\.]+)/))
+    ? (sys.chrome = s[1])
+    : (s = ua.match(/version\/([\d\.]+).*safari/))
+    ? (sys.safari = s[1])
+    : 0;
   // 根据关系进行判断
-  if (sys.ie) return ("IE: " + sys.ie);
-  if (sys.edge) return ("EDGE: " + sys.edge);
-  if (sys.firefox) return ("Firefox: " + sys.firefox);
-  if (sys.chrome) return ("Chrome: " + sys.chrome);
-  if (sys.opera) return ("Opera: " + sys.opera);
-  if (sys.safari) return ("Safari: " + sys.safari);
+  if (sys.ie) return "IE: " + sys.ie;
+  if (sys.edge) return "EDGE: " + sys.edge;
+  if (sys.firefox) return "Firefox: " + sys.firefox;
+  if (sys.chrome) return "Chrome: " + sys.chrome;
+  if (sys.opera) return "Opera: " + sys.opera;
+  if (sys.safari) return "Safari: " + sys.safari;
   return "Unkonwn";
 };
 
@@ -74,14 +84,28 @@ export const getExplore = () => {
  * @return {String} 操作系统类型
  */
 export const getOS = () => {
-  const userAgent = "navigator" in window &amp;&amp; "userAgent" in navigator &amp;&amp; navigator.userAgent.toLowerCase() || "";
-  const appVersion = "navigator" in window &amp;&amp; "appVersion" in navigator &amp;&amp; navigator.appVersion.toLowerCase() || "";
+  const userAgent =
+    ("navigator" in window &amp;&amp;
+      "userAgent" in navigator &amp;&amp;
+      navigator.userAgent.toLowerCase()) ||
+    "";
+  const appVersion =
+    ("navigator" in window &amp;&amp;
+      "appVersion" in navigator &amp;&amp;
+      navigator.appVersion.toLowerCase()) ||
+    "";
   if (/mac/i.test(appVersion)) return "MacOSX";
   if (/win/i.test(appVersion)) return "windows";
   if (/linux/i.test(appVersion)) return "linux";
-  if (/iphone/i.test(userAgent) || /ipad/i.test(userAgent) || /ipod/i.test(userAgent)) "ios";
+  if (
+    /iphone/i.test(userAgent) ||
+    /ipad/i.test(userAgent) ||
+    /ipod/i.test(userAgent)
+  )
+    "ios";
   if (/android/i.test(userAgent)) return "android";
-  if (/win/i.test(appVersion) &amp;&amp; /phone/i.test(userAgent)) return "windowsPhone";
+  if (/win/i.test(appVersion) &amp;&amp; /phone/i.test(userAgent))
+    return "windowsPhone";
 };
 
 /**
@@ -95,8 +119,8 @@ export const getOS = () => {
  */
 
 export const getScrollPos = (el = window) => ({
-  x: (el.pageXOffset !== undefined) ? el.pageXOffset : el.scrollLeft,
-  y: (el.pageYOffset !== undefined) ? el.pageYOffset : el.scrollTop
+  x: el.pageXOffset !== undefined ? el.pageXOffset : el.scrollLeft,
+  y: el.pageYOffset !== undefined ? el.pageYOffset : el.scrollTop
 });
 
 /**
@@ -122,7 +146,7 @@ export const timeTaken = callback => {
  * @param {number} rate - 当前的评级，从0到5
  * @return {string} 当前的评级
  */
-export const getRate = (rate) => {
+export const getRate = rate => {
   return "★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate);
 };
 
@@ -134,7 +158,8 @@ export const turnToStackoverflow = (func, context) => {
   try {
     func.call(context);
   } catch (e) {
-    window.location.href = "http://stackoverflow.com/search?q=[js]+" + e.message;
+    window.location.href =
+      "http://stackoverflow.com/search?q=[js]+" + e.message;
   }
 };
 
@@ -150,7 +175,17 @@ export const turnToStackoverflow = (func, context) => {
  */
 export function parseUrl(url) {
   const result = {};
-  const keys = ["href", "origin", "protocol", "host", "hostname", "port", "pathname", "search", "hash"];
+  const keys = [
+    "href",
+    "origin",
+    "protocol",
+    "host",
+    "hostname",
+    "port",
+    "pathname",
+    "search",
+    "hash"
+  ];
   const regexp = /(([^:]+:)\/\/(([^:\/\?#]+)(:\d+)?))(\/[^?#]*)?(\?[^#]*)?(#.*)?/;
   const match = regexp.exec(url);
   if (match) {
@@ -183,7 +218,6 @@ export function getPrime(str, end) {
   }
   return res;
 }
-
 </code></pre>
         </article>
     </section>
@@ -194,13 +228,13 @@ export function getPrime(str, end) {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-array.html">array</a></li><li><a href="module-format.html">format</a></li><li><a href="module-get.html">get</a></li><li><a href="module-is.html">is</a></li><li><a href="module-keycode.html">keycode</a></li><li><a href="module-random.html">random</a></li><li><a href="module-storage.html">storage</a></li><li><a href="module-string.html">string</a></li></ul><h3>Global</h3><ul><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#objectCopyData">objectCopyData</a></li><li><a href="global.html#once">once</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-array.html">array</a></li><li><a href="module-format.html">format</a></li><li><a href="module-get.html">get</a></li><li><a href="module-is.html">is</a></li><li><a href="module-keycode.html">keycode</a></li><li><a href="module-random.html">random</a></li><li><a href="module-storage.html">storage</a></li><li><a href="module-string.html">string</a></li></ul><h3>Global</h3><ul><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#extendObj">extendObj</a></li><li><a href="global.html#objectCopyData">objectCopyData</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#throttle">throttle</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Nov 20 2018 18:28:23 GMT+0800 (CST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon May 20 2019 16:37:44 GMT+0800 (China Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>

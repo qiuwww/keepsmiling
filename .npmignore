@@ -5,3 +5,4 @@ static/
 NOTES.md
 .travis.yml
 .eslintignore
+demo/

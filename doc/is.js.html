@@ -35,8 +35,7 @@
  * @return {Boolean}
  */
 export function isEmptyObject(obj) {
-  if (!obj || typeof obj !== "object" || Array.isArray(obj))
-    return false;
+  if (!obj || typeof obj !== "object" || Array.isArray(obj)) return false;
   return !Object.keys(obj).length;
 }
 
@@ -55,10 +54,51 @@ export function isEmail(str) {
  */
 export function isIdCard(code) {
   // return /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/.test(str);
-  let city = { 11: "北京", 12: "天津", 13: "河北", 14: "山西", 15: "内蒙古", 21: "辽宁", 22: "吉林", 23: "黑龙江 ", 31: "上海", 32: "江苏", 33: "浙江", 34: "安徽", 35: "福建", 36: "江西", 37: "山东", 41: "河南", 42: "湖北 ", 43: "湖南", 44: "广东", 45: "广西", 46: "海南", 50: "重庆", 51: "四川", 52: "贵州", 53: "云南", 54: "西藏 ", 61: "陕西", 62: "甘肃", 63: "青海", 64: "宁夏", 65: "新疆", 71: "台湾", 81: "香港", 82: "澳门", 91: "国外 " };
+  let city = {
+    11: "北京",
+    12: "天津",
+    13: "河北",
+    14: "山西",
+    15: "内蒙古",
+    21: "辽宁",
+    22: "吉林",
+    23: "黑龙江 ",
+    31: "上海",
+    32: "江苏",
+    33: "浙江",
+    34: "安徽",
+    35: "福建",
+    36: "江西",
+    37: "山东",
+    41: "河南",
+    42: "湖北 ",
+    43: "湖南",
+    44: "广东",
+    45: "广西",
+    46: "海南",
+    50: "重庆",
+    51: "四川",
+    52: "贵州",
+    53: "云南",
+    54: "西藏 ",
+    61: "陕西",
+    62: "甘肃",
+    63: "青海",
+    64: "宁夏",
+    65: "新疆",
+    71: "台湾",
+    81: "香港",
+    82: "澳门",
+    91: "国外 "
+  };
   let tip = "";
   let pass = true;
-  if (!code || !/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i.test(code)) {
+  if (
+    !code ||
+    !/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i.test(
+      code
+    )
+  ) {
     tip = "身份证号格式错误";
     pass = false;
   } else if (!city[code.substr(0, 2)]) {
@@ -95,7 +135,9 @@ export function isIdCard(code) {
  * @return {Boolean}
  */
 export function isPhoneNum(str) {
-  return /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/.test(str);
+  return /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/.test(
+    str
+  );
 }
 /**
  * @desc   判断是否为URL地址
@@ -103,7 +145,9 @@ export function isPhoneNum(str) {
  * @return {Boolean}
  */
 export function isUrl(str) {
-  return /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&amp;//=]*)/i.test(str);
+  return /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&amp;//=]*)/i.test(
+    str
+  );
 }
 
 /**
@@ -111,7 +155,7 @@ export function isUrl(str) {
  * @param {object} obj 需要判断的对象
  * @return {Boolean}
  */
-export const isObject = function (obj) {
+export const isObject = function(obj) {
   if (obj &amp;&amp; typeof obj === "object" &amp;&amp; obj.toString === "[object Object]") {
     return true;
   } else {
@@ -124,27 +168,29 @@ export const isObject = function (obj) {
  * @param {*} n - 需要判断的数值
  */
 export function isPrime(n) {
-  return !(/^.?$|^(..+?)\1+$/).test("1".repeat(n));
+  return !/^.?$|^(..+?)\1+$/.test("1".repeat(n));
 }
 
 /**
  * @desc 添加js的类型判断函数
  * @return {function}
  */
-(function () {
+(function() {
   "use strict";
-  const types = "Array Object String Date RegExp Function Boolean Number Null Undefined".split(" ");
+  const types = "Array Object String Date RegExp Function Boolean Number Null Undefined".split(
+    " "
+  );
   function type() {
     return Object.prototype.toString.call(this).slice(8, -1);
   }
-  for (let i = types.length; i--;) {
-    window.keepsmiling["is" + types[i]] = (function (self) {
-      return function (elem) {
+  for (let i = types.length; i--; ) {
+    window.keepsmiling["is" + types[i]] = (function(self) {
+      return function(elem) {
         return type.call(elem) === self;
       };
     })(types[i]);
   }
-})();//类型判断
+})(); //类型判断
 
 /**
  * 判断是不是在node环境下执行代码
@@ -152,7 +198,10 @@ export function isPrime(n) {
  * @param {object} - 当前的全局process对象
  * @return {Boolean}
  */
-export const isBrowserEnv = (process) => Object.prototype.toString.call(typeof process !== "undefined" ? process : 0) === "[object process]";
+export const isBrowserEnv = process =>
+  Object.prototype.toString.call(
+    typeof process !== "undefined" ? process : 0
+  ) === "[object process]";
 /**
  * @function
  * @description 检测字符串是不是回文结构
@@ -166,7 +215,13 @@ export const isBrowserEnv = (process) => Object.prototype.toString.call(typeof p
  */
 export function isPalindrome(str) {
   str = str.replace(/W/g, "").toLowerCase();
-  return (str === str.split("").reverse().join(""));
+  return (
+    str ===
+    str
+      .split("")
+      .reverse()
+      .join("")
+  );
 }
 </code></pre>
         </article>
@@ -178,13 +233,13 @@ export function isPalindrome(str) {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-array.html">array</a></li><li><a href="module-format.html">format</a></li><li><a href="module-get.html">get</a></li><li><a href="module-is.html">is</a></li><li><a href="module-keycode.html">keycode</a></li><li><a href="module-random.html">random</a></li><li><a href="module-storage.html">storage</a></li><li><a href="module-string.html">string</a></li></ul><h3>Global</h3><ul><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#objectCopyData">objectCopyData</a></li><li><a href="global.html#once">once</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-array.html">array</a></li><li><a href="module-format.html">format</a></li><li><a href="module-get.html">get</a></li><li><a href="module-is.html">is</a></li><li><a href="module-keycode.html">keycode</a></li><li><a href="module-random.html">random</a></li><li><a href="module-storage.html">storage</a></li><li><a href="module-string.html">string</a></li></ul><h3>Global</h3><ul><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#extendObj">extendObj</a></li><li><a href="global.html#objectCopyData">objectCopyData</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#throttle">throttle</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Nov 20 2018 18:28:23 GMT+0800 (CST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon May 20 2019 16:37:44 GMT+0800 (China Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>

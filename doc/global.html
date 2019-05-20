@@ -144,7 +144,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="advancedFunction_deepClone.js.html">advancedFunction/deepClone.js</a>, <a href="advancedFunction_deepClone.js.html#line47">line 47</a>
+        <a href="advancedFunction_deepClone.js.html">advancedFunction/deepClone.js</a>, <a href="advancedFunction_deepClone.js.html#line45">line 45</a>
     </li></ul></dd>
     
 
@@ -321,7 +321,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="advancedFunction_debounce.js.html">advancedFunction/debounce.js</a>, <a href="advancedFunction_debounce.js.html#line15">line 15</a>
+        <a href="advancedFunction_debounce.js.html">advancedFunction/debounce.js</a>, <a href="advancedFunction_debounce.js.html#line14">line 14</a>
     </li></ul></dd>
     
 
@@ -372,8 +372,7 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>// Usage
-var myEfficientFn = debounce(function () {
+    <pre class="prettyprint"><code>var myEfficientFn = debounce(function () {
 // todo
 }, 250);
 window.addEventListener('resize', myEfficientFn);</code></pre>
@@ -493,7 +492,7 @@ window.addEventListener('resize', myEfficientFn);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="advancedFunction_deepClone.js.html">advancedFunction/deepClone.js</a>, <a href="advancedFunction_deepClone.js.html#line12">line 12</a>
+        <a href="advancedFunction_deepClone.js.html">advancedFunction/deepClone.js</a>, <a href="advancedFunction_deepClone.js.html#line10">line 10</a>
     </li></ul></dd>
     
 
@@ -532,6 +531,188 @@ window.addEventListener('resize', myEfficientFn);</code></pre>
     <dd>
         
 <span class="param-type">Any</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="extendObj"><span class="type-signature"></span>extendObj<span class="signature">(obj,, extension)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+    <p class="summary"><p>对象扩展，这里本质上还是浅复制，如果属性是一个应用类型就会复制属性的指向</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>对象扩展，这里本质上还是浅复制，如果属性是一个应用类型就会复制属性的指向</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>obj,</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>需要被扩展的对象</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>extension</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>使用当前对象去覆盖obj的属性，并添加extension的特有属性</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="extend.js.html">extend.js</a>, <a href="extend.js.html#line7">line 7</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回一个对象，是改变了的obj</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
 
 
     </dd>
@@ -713,6 +894,197 @@ canOnlyFireOnce();</code></pre>
 
 
         
+            
+
+    
+
+    
+    <h4 class="name" id="throttle"><span class="type-signature"></span>throttle<span class="signature">(func, delay, duration)</span><span class="type-signature"></span></h4>
+    
+
+    
+    <p class="summary"><p>throttle 函数节流，在延迟delay时间内，如果连续触发就重置一次的时间，d一次uration时间内只允许触发，合并了函数去抖动与函数节流</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>throttle 函数节流，在延迟delay时间内，如果连续触发就重置一次的时间，d一次uration时间内只允许触发，合并了函数去抖动与函数节流</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要处理的函数</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>delay</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>防抖动的时间</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>duration</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>节流的时间间隔</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="advancedFunction_throttle.js.html">advancedFunction/throttle.js</a>, <a href="advancedFunction_throttle.js.html#line12">line 12</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>function scrollFn(){
+  console.log(1)
+}
+window.onscroll = throttle(scrollFn,100,500)</code></pre>
+
+
+
+        
     
 
     
@@ -728,13 +1100,13 @@ canOnlyFireOnce();</code></pre>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-array.html">array</a></li><li><a href="module-format.html">format</a></li><li><a href="module-get.html">get</a></li><li><a href="module-is.html">is</a></li><li><a href="module-keycode.html">keycode</a></li><li><a href="module-random.html">random</a></li><li><a href="module-storage.html">storage</a></li><li><a href="module-string.html">string</a></li></ul><h3>Global</h3><ul><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#objectCopyData">objectCopyData</a></li><li><a href="global.html#once">once</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-array.html">array</a></li><li><a href="module-format.html">format</a></li><li><a href="module-get.html">get</a></li><li><a href="module-is.html">is</a></li><li><a href="module-keycode.html">keycode</a></li><li><a href="module-random.html">random</a></li><li><a href="module-storage.html">storage</a></li><li><a href="module-string.html">string</a></li></ul><h3>Global</h3><ul><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#extendObj">extendObj</a></li><li><a href="global.html#objectCopyData">objectCopyData</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#throttle">throttle</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Nov 20 2018 18:28:23 GMT+0800 (CST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon May 20 2019 16:37:44 GMT+0800 (China Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>

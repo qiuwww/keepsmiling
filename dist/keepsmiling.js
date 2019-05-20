@@ -105,7 +105,7 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 /***/ (function(module, exports, __webpack_require__) {
 
 var anObject = __webpack_require__(10);
-var IE8_DOM_DEFINE = __webpack_require__(32);
+var IE8_DOM_DEFINE = __webpack_require__(33);
 var toPrimitive = __webpack_require__(19);
 var dP = Object.defineProperty;
 
@@ -174,7 +174,7 @@ module.exports = function (exec) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(35);
+var IObject = __webpack_require__(36);
 var defined = __webpack_require__(21);
 module.exports = function (it) {
   return IObject(defined(it));
@@ -187,7 +187,7 @@ module.exports = function (it) {
 
 var global = __webpack_require__(2);
 var core = __webpack_require__(0);
-var ctx = __webpack_require__(31);
+var ctx = __webpack_require__(32);
 var hide = __webpack_require__(5);
 var has = __webpack_require__(4);
 var PROTOTYPE = 'prototype';
@@ -288,7 +288,7 @@ module.exports = function (bitmap, value) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys = __webpack_require__(34);
+var $keys = __webpack_require__(35);
 var enumBugKeys = __webpack_require__(25);
 
 module.exports = Object.keys || function keys(O) {
@@ -486,7 +486,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _assign = __webpack_require__(45);
+var _assign = __webpack_require__(31);
 
 var _assign2 = _interopRequireDefault(_assign);
 
@@ -500,6 +500,7 @@ if (window && typeof window !== "undefined") {
     window.ks = window.keepsmiling = keepsmiling;
   } else {
     // 怎么处理
+    throw new Error("keepsmiling 被占用，请修改尝试");
   }
 }
 
@@ -507,7 +508,7 @@ if (window && typeof window !== "undefined") {
 var packageConfig = __webpack_require__(52);
 keepsmiling.version = packageConfig.version;
 keepsmiling.description = packageConfig.description;
-keepsmiling.docs = packageConfig.docs;
+keepsmiling.doc = packageConfig.doc;
 
 // 获取下边的所有文件，并扩展原对象,files是一个函数，支持一级展示
 var files = __webpack_require__(53);
@@ -523,6 +524,12 @@ exports.default = keepsmiling;
 
 /***/ }),
 /* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(46), __esModule: true };
+
+/***/ }),
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
@@ -548,16 +555,16 @@ module.exports = function (fn, that, length) {
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = !__webpack_require__(6) && !__webpack_require__(7)(function () {
-  return Object.defineProperty(__webpack_require__(33)('div'), 'a', { get: function () { return 7; } }).a != 7;
+  return Object.defineProperty(__webpack_require__(34)('div'), 'a', { get: function () { return 7; } }).a != 7;
 });
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(11);
@@ -570,7 +577,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var has = __webpack_require__(4);
@@ -593,7 +600,7 @@ module.exports = function (object, names) {
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
@@ -605,7 +612,7 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.15 ToLength
@@ -617,13 +624,13 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = { "default": __webpack_require__(56), __esModule: true };
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -650,7 +657,7 @@ exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.d
 };
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -658,7 +665,7 @@ exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.d
 var $at = __webpack_require__(59)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
-__webpack_require__(40)(String, 'String', function (iterated) {
+__webpack_require__(41)(String, 'String', function (iterated) {
   this._t = String(iterated); // target
   this._i = 0;                // next index
 // 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -674,14 +681,14 @@ __webpack_require__(40)(String, 'String', function (iterated) {
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var LIBRARY = __webpack_require__(15);
 var $export = __webpack_require__(9);
-var redefine = __webpack_require__(41);
+var redefine = __webpack_require__(42);
 var hide = __webpack_require__(5);
 var Iterators = __webpack_require__(14);
 var $iterCreate = __webpack_require__(60);
@@ -750,14 +757,14 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(5);
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
@@ -771,7 +778,7 @@ var PROTOTYPE = 'prototype';
 // Create object with fake `null` prototype: use iframe Object with cleared prototype
 var createDict = function () {
   // Thrash, waste and sodomy: IE GC bug
-  var iframe = __webpack_require__(33)('iframe');
+  var iframe = __webpack_require__(34)('iframe');
   var i = enumBugKeys.length;
   var lt = '<';
   var gt = '>';
@@ -804,11 +811,11 @@ module.exports = Object.create || function create(O, Properties) {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys = __webpack_require__(34);
+var $keys = __webpack_require__(35);
 var hiddenKeys = __webpack_require__(25).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
@@ -817,7 +824,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -828,11 +835,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.isBrowserEnv = exports.isObject = undefined;
 
-var _keys = __webpack_require__(93);
+var _keys = __webpack_require__(95);
 
 var _keys2 = _interopRequireDefault(_keys);
 
-var _typeof2 = __webpack_require__(38);
+var _typeof2 = __webpack_require__(39);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -875,7 +882,43 @@ function isEmail(str) {
  */
 function isIdCard(code) {
   // return /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/.test(str);
-  var city = { 11: "北京", 12: "天津", 13: "河北", 14: "山西", 15: "内蒙古", 21: "辽宁", 22: "吉林", 23: "黑龙江 ", 31: "上海", 32: "江苏", 33: "浙江", 34: "安徽", 35: "福建", 36: "江西", 37: "山东", 41: "河南", 42: "湖北 ", 43: "湖南", 44: "广东", 45: "广西", 46: "海南", 50: "重庆", 51: "四川", 52: "贵州", 53: "云南", 54: "西藏 ", 61: "陕西", 62: "甘肃", 63: "青海", 64: "宁夏", 65: "新疆", 71: "台湾", 81: "香港", 82: "澳门", 91: "国外 " };
+  var city = {
+    11: "北京",
+    12: "天津",
+    13: "河北",
+    14: "山西",
+    15: "内蒙古",
+    21: "辽宁",
+    22: "吉林",
+    23: "黑龙江 ",
+    31: "上海",
+    32: "江苏",
+    33: "浙江",
+    34: "安徽",
+    35: "福建",
+    36: "江西",
+    37: "山东",
+    41: "河南",
+    42: "湖北 ",
+    43: "湖南",
+    44: "广东",
+    45: "广西",
+    46: "海南",
+    50: "重庆",
+    51: "四川",
+    52: "贵州",
+    53: "云南",
+    54: "西藏 ",
+    61: "陕西",
+    62: "甘肃",
+    63: "青海",
+    64: "宁夏",
+    65: "新疆",
+    71: "台湾",
+    81: "香港",
+    82: "澳门",
+    91: "国外 "
+  };
   var tip = "";
   var pass = true;
   if (!code || !/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i.test(code)) {
@@ -995,12 +1038,6 @@ function isPalindrome(str) {
 }
 
 /***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(46), __esModule: true };
-
-/***/ }),
 /* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1039,7 +1076,7 @@ var getKeys = __webpack_require__(13);
 var gOPS = __webpack_require__(26);
 var pIE = __webpack_require__(17);
 var toObject = __webpack_require__(18);
-var IObject = __webpack_require__(35);
+var IObject = __webpack_require__(36);
 var $assign = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
@@ -1076,7 +1113,7 @@ module.exports = !$assign || __webpack_require__(7)(function () {
 // false -> Array#indexOf
 // true  -> Array#includes
 var toIObject = __webpack_require__(8);
-var toLength = __webpack_require__(36);
+var toLength = __webpack_require__(37);
 var toAbsoluteIndex = __webpack_require__(51);
 module.exports = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
@@ -1115,7 +1152,7 @@ module.exports = function (index, length) {
 /* 52 */
 /***/ (function(module, exports) {
 
-module.exports = {"name":"keepsmiling","version":"1.1.0","description":"utils","main":"dist/keepsmiling.min.js","docs":"http://htmlpreview.github.io/?https://github.com/moonbreezee/keepsmiling/blob/master/docs/index.html","scripts":{"dev":"cross-env NODE_ENV=dev node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./scripts/webpack.dev.config.js --color","build":"cross-env NODE_ENV=prod node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color","dep":"cross-env NODE_ENV=dep node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color","jsdoc":"node ./node_modules/jsdoc/jsdoc.js lib/index.js -c ./scripts/jsdoc.conf.json -R README.md -r","test":"npm run dep && node ./node_modules/karma/bin/karma start ./scripts/karma.conf.js","eslint":"node ./node_modules/eslint/bin/eslint.js -c ./scripts/.eslintrc.js lib/** --fix","beforePush":"npm run eslint && npm run jsdoc && npm run build","beforePublish":"npm run eslint && npm run jsdoc && npm run dep"},"repository":{"type":"git","url":"https://github.com/moonbreezee/keepsmiling.git"},"author":"moonbreezee","license":"ISC","bugs":{"url":"https://github.com/moonbreezee/keepsmiling/issues"},"homepage":"https://github.com/moonbreezee/keepsmiling","devDependencies":{"babel-core":"^6.22.1","babel-eslint":"^8.2.3","babel-loader":"^6.4.1","babel-plugin-transform-runtime":"^6.22.0","babel-preset-es2015":"^6.22.0","babel-preset-stage-0":"^6.24.1","cross-env":"^5.1.4","eslint":"^4.19.1","eslint-plugin-node":"^6.0.1","express":"^4.16.4","extract-text-webpack-plugin":"^3.0.2","jsdoc":"^3.5.5","karma":"^2.0.2","karma-chrome-launcher":"^2.2.0","karma-coverage":"^1.1.1","karma-mocha":"^1.3.0","karma-mocha-reporter":"^2.2.5","karma-power-assert":"^1.0.0","mocha":"^5.1.1","opn":"^5.4.0","power-assert":"^1.6.1","webpack":"^3.12.0","webpack-dev-server":"^2.11.3","webpack-merge":"^4.1.2","clean-webpack-plugin":"^1.0.0"}}
+module.exports = {"name":"keepsmiling","version":"1.2.2","description":"utils","keywords":["utils"],"main":"dist/keepsmiling.min.js","doc":"http://htmlpreview.github.io/?https://github.com/moonbreezee/keepsmiling/blob/master/doc/index.html","scripts":{"dev":"cross-env NODE_ENV=dev node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./scripts/webpack.dev.config.js --color","build":"cross-env NODE_ENV=prod node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color","dep":"cross-env NODE_ENV=dep node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color","jsdoc":"node ./node_modules/jsdoc/jsdoc.js lib/index.js -c ./scripts/jsdoc.conf.json -R README.md -r","test":"npm run dep && node ./node_modules/karma/bin/karma start ./scripts/karma.conf.js","eslint":"node ./node_modules/eslint/bin/eslint.js -c ./scripts/.eslintrc.js lib/** --fix","beforePublish":"npm run eslint && npm run jsdoc && npm run dep"},"repository":{"type":"git","url":"https://github.com/moonbreezee/keepsmiling.git"},"author":"moonbreezee","license":"ISC","bugs":{"url":"https://github.com/moonbreezee/keepsmiling/issues"},"homepage":"https://github.com/moonbreezee/keepsmiling","devDependencies":{"babel-core":"^6.22.1","babel-eslint":"^8.2.3","babel-loader":"^6.4.1","babel-plugin-transform-runtime":"^6.22.0","babel-preset-es2015":"^6.22.0","babel-preset-stage-0":"^6.24.1","cross-env":"^5.1.4","eslint":"^4.19.1","eslint-plugin-node":"^6.0.1","express":"^4.16.4","extract-text-webpack-plugin":"^3.0.2","jsdoc":"^3.5.5","karma":"^2.0.2","karma-chrome-launcher":"^2.2.0","karma-coverage":"^1.1.1","karma-mocha":"^1.3.0","karma-mocha-reporter":"^2.2.5","karma-power-assert":"^1.0.0","mocha":"^5.1.1","opn":"^5.4.0","power-assert":"^1.6.1","webpack":"^3.12.0","webpack-dev-server":"^2.11.3","webpack-merge":"^4.1.2","clean-webpack-plugin":"^1.0.0"}}
 
 /***/ }),
 /* 53 */
@@ -1125,15 +1162,17 @@ var map = {
 	"./advancedFunction/debounce.js": 54,
 	"./advancedFunction/deepClone.js": 55,
 	"./advancedFunction/once.js": 79,
-	"./array.js": 80,
-	"./format.js": 91,
-	"./get.js": 92,
+	"./advancedFunction/throttle.js": 80,
+	"./array.js": 81,
+	"./extend.js": 92,
+	"./format.js": 93,
+	"./get.js": 94,
 	"./index.js": 30,
-	"./is.js": 44,
-	"./keycode.js": 97,
-	"./random.js": 98,
-	"./storage.js": 99,
-	"./string.js": 100
+	"./is.js": 45,
+	"./keycode.js": 99,
+	"./random.js": 100,
+	"./storage.js": 101,
+	"./string.js": 102
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -1170,7 +1209,6 @@ exports.debounce = debounce;
  * @param {Boolean} immediate - 是否延时执行
  * @return {Function} 新的防抖函数。
  * @example
- * // Usage
  * var myEfficientFn = debounce(function () {
  * // todo
  * }, 250);
@@ -1204,11 +1242,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.objectCopyData = undefined;
 
-var _stringify = __webpack_require__(37);
+var _stringify = __webpack_require__(38);
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
-var _typeof2 = __webpack_require__(38);
+var _typeof2 = __webpack_require__(39);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -1286,7 +1324,7 @@ module.exports = { "default": __webpack_require__(58), __esModule: true };
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(39);
+__webpack_require__(40);
 __webpack_require__(64);
 module.exports = __webpack_require__(28).f('iterator');
 
@@ -1320,7 +1358,7 @@ module.exports = function (TO_STRING) {
 
 "use strict";
 
-var create = __webpack_require__(42);
+var create = __webpack_require__(43);
 var descriptor = __webpack_require__(12);
 var setToStringTag = __webpack_require__(27);
 var IteratorPrototype = {};
@@ -1420,7 +1458,7 @@ var toIObject = __webpack_require__(8);
 // 22.1.3.13 Array.prototype.keys()
 // 22.1.3.29 Array.prototype.values()
 // 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(40)(Array, 'Array', function (iterated, kind) {
+module.exports = __webpack_require__(41)(Array, 'Array', function (iterated, kind) {
   this._t = toIObject(iterated); // target
   this._i = 0;                   // next index
   this._k = kind;                // kind
@@ -1490,7 +1528,7 @@ var global = __webpack_require__(2);
 var has = __webpack_require__(4);
 var DESCRIPTORS = __webpack_require__(6);
 var $export = __webpack_require__(9);
-var redefine = __webpack_require__(41);
+var redefine = __webpack_require__(42);
 var META = __webpack_require__(71).KEY;
 var $fails = __webpack_require__(7);
 var shared = __webpack_require__(24);
@@ -1506,7 +1544,7 @@ var isObject = __webpack_require__(11);
 var toIObject = __webpack_require__(8);
 var toPrimitive = __webpack_require__(19);
 var createDesc = __webpack_require__(12);
-var _create = __webpack_require__(42);
+var _create = __webpack_require__(43);
 var gOPNExt = __webpack_require__(74);
 var $GOPD = __webpack_require__(75);
 var $DP = __webpack_require__(3);
@@ -1633,7 +1671,7 @@ if (!USE_NATIVE) {
 
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f = $defineProperty;
-  __webpack_require__(43).f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__(44).f = gOPNExt.f = $getOwnPropertyNames;
   __webpack_require__(17).f = $propertyIsEnumerable;
   __webpack_require__(26).f = $getOwnPropertySymbols;
 
@@ -1817,7 +1855,7 @@ module.exports = Array.isArray || function isArray(arg) {
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
 var toIObject = __webpack_require__(8);
-var gOPN = __webpack_require__(43).f;
+var gOPN = __webpack_require__(44).f;
 var toString = {}.toString;
 
 var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -1845,7 +1883,7 @@ var createDesc = __webpack_require__(12);
 var toIObject = __webpack_require__(8);
 var toPrimitive = __webpack_require__(19);
 var has = __webpack_require__(4);
-var IE8_DOM_DEFINE = __webpack_require__(32);
+var IE8_DOM_DEFINE = __webpack_require__(33);
 var gOPD = Object.getOwnPropertyDescriptor;
 
 exports.f = __webpack_require__(6) ? gOPD : function getOwnPropertyDescriptor(O, P) {
@@ -1922,9 +1960,57 @@ function once(fn, context) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.throttle = throttle;
+/**
+ * @desc throttle 函数节流，在延迟delay时间内，如果连续触发就重置一次的时间，d一次uration时间内只允许触发，合并了函数去抖动与函数节流
+ * @param {*} func 要处理的函数
+ * @param {*} delay 防抖动的时间
+ * @param {*} duration 节流的时间间隔
+ * @example
+ * @Usage
+ * function scrollFn(){
+ *   console.log(1)
+ * }
+ * window.onscroll = throttle(scrollFn,100,500)
+ */
+function throttle(func) {
+  var delay = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 100;
+  var duration = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1500;
+
+  if (typeof func !== "function") {
+    throw Error("throttle函数报错: 第一个参数需要是函数类型");
+  }
+  var timer = null;
+  var begin = new Date();
+  return function () {
+    var context = this,
+        args = arguments;
+    var current = new Date();
+    clearTimeout(timer);
+    if (current - begin >= duration) {
+      func.apply(context, args);
+      begin = current;
+    } else {
+      timer = setTimeout(function () {
+        func.apply(context, args);
+      }, delay);
+    }
+  };
+}
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.arrayMin = exports.arrayMax = undefined;
 
-var _toConsumableArray2 = __webpack_require__(81);
+var _toConsumableArray2 = __webpack_require__(82);
 
 var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
@@ -1999,7 +2085,7 @@ var arrayMin = exports.arrayMin = function arrayMin(arr) {
 };
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2007,7 +2093,7 @@ var arrayMin = exports.arrayMin = function arrayMin(arr) {
 
 exports.__esModule = true;
 
-var _from = __webpack_require__(82);
+var _from = __webpack_require__(83);
 
 var _from2 = _interopRequireDefault(_from);
 
@@ -2026,36 +2112,36 @@ exports.default = function (arr) {
 };
 
 /***/ }),
-/* 82 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(83), __esModule: true };
-
-/***/ }),
 /* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(39);
-__webpack_require__(84);
-module.exports = __webpack_require__(0).Array.from;
-
+module.exports = { "default": __webpack_require__(84), __esModule: true };
 
 /***/ }),
 /* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(40);
+__webpack_require__(85);
+module.exports = __webpack_require__(0).Array.from;
+
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
-var ctx = __webpack_require__(31);
+var ctx = __webpack_require__(32);
 var $export = __webpack_require__(9);
 var toObject = __webpack_require__(18);
-var call = __webpack_require__(85);
-var isArrayIter = __webpack_require__(86);
-var toLength = __webpack_require__(36);
-var createProperty = __webpack_require__(87);
-var getIterFn = __webpack_require__(88);
+var call = __webpack_require__(86);
+var isArrayIter = __webpack_require__(87);
+var toLength = __webpack_require__(37);
+var createProperty = __webpack_require__(88);
+var getIterFn = __webpack_require__(89);
 
-$export($export.S + $export.F * !__webpack_require__(90)(function (iter) { Array.from(iter); }), 'Array', {
+$export($export.S + $export.F * !__webpack_require__(91)(function (iter) { Array.from(iter); }), 'Array', {
   // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
   from: function from(arrayLike /* , mapfn = undefined, thisArg = undefined */) {
     var O = toObject(arrayLike);
@@ -2085,7 +2171,7 @@ $export($export.S + $export.F * !__webpack_require__(90)(function (iter) { Array
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // call something on iterator step with safe closing on error
@@ -2103,7 +2189,7 @@ module.exports = function (iterator, fn, value, entries) {
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
@@ -2117,7 +2203,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2132,10 +2218,10 @@ module.exports = function (object, index, value) {
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var classof = __webpack_require__(89);
+var classof = __webpack_require__(90);
 var ITERATOR = __webpack_require__(1)('iterator');
 var Iterators = __webpack_require__(14);
 module.exports = __webpack_require__(0).getIteratorMethod = function (it) {
@@ -2146,7 +2232,7 @@ module.exports = __webpack_require__(0).getIteratorMethod = function (it) {
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
@@ -2175,7 +2261,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ITERATOR = __webpack_require__(1)('iterator');
@@ -2203,7 +2289,45 @@ module.exports = function (exec, skipClosing) {
 
 
 /***/ }),
-/* 91 */
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _assign = __webpack_require__(31);
+
+var _assign2 = _interopRequireDefault(_assign);
+
+exports.extendObj = extendObj;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * @desc 对象扩展，这里本质上还是浅复制，如果属性是一个应用类型就会复制属性的指向
+ * @param {object} obj, 需要被扩展的对象
+ * @param {object} extension 使用当前对象去覆盖obj的属性，并添加extension的特有属性
+ * @return {object} 返回一个对象，是改变了的obj
+ */
+function extendObj() {
+  var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var extension = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+  if (typeof _assign2.default === "function") {
+    obj = (0, _assign2.default)(obj, extension);
+  }
+  for (var key in extension) {
+    obj[key] = extension[key];
+  }
+  return obj;
+}
+
+/***/ }),
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2327,7 +2451,7 @@ function trim() {
 }
 
 /***/ }),
-/* 92 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2340,16 +2464,21 @@ exports.turnToStackoverflow = exports.getRate = exports.timeTaken = exports.getS
 exports.parseUrl = parseUrl;
 exports.getPrime = getPrime;
 
-var _is = __webpack_require__(44);
+var _is = __webpack_require__(45);
 
 /**
  * @desc 获取当前页面的url中的查询参数
  * @param {String} key - 需要获取的简值对的key
+ * @param {String} str - 需要获取的地址，可以是url也可以是一段字符串
  * @return {Function}
  */
-var getQueryString = exports.getQueryString = function getQueryString(key) {
+var getQueryString = exports.getQueryString = function getQueryString() {
+  var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
+  var key = arguments[1];
+
+  str = str.includes("?") ? str.split("?")[1] : str;
   var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
-  var r = window.location.search.substr(1).match(reg);
+  var r = str.match(reg);
   if (r != null) {
     return unescape(r[2]);
   }
@@ -2497,28 +2626,28 @@ function getPrime(str, end) {
 }
 
 /***/ }),
-/* 93 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(94), __esModule: true };
+module.exports = { "default": __webpack_require__(96), __esModule: true };
 
 /***/ }),
-/* 94 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(95);
+__webpack_require__(97);
 module.exports = __webpack_require__(0).Object.keys;
 
 
 /***/ }),
-/* 95 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 Object.keys(O)
 var toObject = __webpack_require__(18);
 var $keys = __webpack_require__(13);
 
-__webpack_require__(96)('keys', function () {
+__webpack_require__(98)('keys', function () {
   return function keys(it) {
     return $keys(toObject(it));
   };
@@ -2526,7 +2655,7 @@ __webpack_require__(96)('keys', function () {
 
 
 /***/ }),
-/* 96 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // most Object methods by ES6 should accept primitives
@@ -2542,7 +2671,7 @@ module.exports = function (KEY, exec) {
 
 
 /***/ }),
-/* 97 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2682,7 +2811,7 @@ function getKeyName(keycode) {
 }
 
 /***/ }),
-/* 98 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2724,7 +2853,7 @@ function randomNum() {
 }
 
 /***/ }),
-/* 99 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2735,7 +2864,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.removeCookie = exports.getCookie = exports.setCookie = exports.removeLocalStorage = exports.getLocalStorage = exports.setLocalStorage = undefined;
 
-var _stringify = __webpack_require__(37);
+var _stringify = __webpack_require__(38);
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
@@ -2825,7 +2954,7 @@ var removeCookie = exports.removeCookie = function removeCookie(name) {
 };
 
 /***/ }),
-/* 100 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
