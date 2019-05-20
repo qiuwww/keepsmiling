@@ -13,7 +13,7 @@ npm publish
 # 提交代码
 git add *
 git commit -m "npm 发布，代码提交"
-git push
+git push origin develop
 git checkout master
 git merge develop
 git push origin master
