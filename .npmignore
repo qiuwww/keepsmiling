@@ -6,3 +6,5 @@ NOTES.md
 .travis.yml
 .eslintignore
 demo/
+publish.sh
+push-master.sh

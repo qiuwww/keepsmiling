@@ -14,7 +14,7 @@
     "jsdoc": "node ./node_modules/jsdoc/jsdoc.js lib/index.js -c ./scripts/jsdoc.conf.json -R README.md -r",
     "test": "npm run dep && node ./node_modules/karma/bin/karma start ./scripts/karma.conf.js",
     "eslint": "node ./node_modules/eslint/bin/eslint.js -c ./scripts/.eslintrc.js lib/** --fix",
-    "publish": "sh publish.sh",
+    "publish": "push-master && sh publish.sh",
     "push-master": "sh push-master"
   },
   "repository": {
