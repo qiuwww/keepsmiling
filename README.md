@@ -1,10 +1,18 @@
-# keepsmiling
+---
+title: keepsmiling
+tags:
+  - util
+  - test
+  - eslint
+  - jsdoc
+  - webpack
+author: https://github.com/moonbreezee
+update: 2020-03-08
+---
 
-utils test eslint jsdoc webpack
+生成自己的 js 工具包，包括打包 webpack、测试 mocha、生成文档 jsdoc、发布 npm 包的操作。
 
-生成自己的 js 工具包，包括打包 webpack、测试 mocha、生成文档 jsdoc、发布 npm 包的操作
-
-[github 地址](https://github.com/moonbreezee/keepsmiling.git)
+[仓库 github 地址](https://github.com/moonbreezee/keepsmiling.git)
 
 ## Installation
 
@@ -20,15 +28,16 @@ Install with yarn:
 yarn add keepsmiling
 ```
 
-In Node
+In Node：
 
 ```js
 // keepsmiling the full build.
 const keepsmiling = require("keepsmiling");
 import keepsmiling from "keepsmiling"; // ES6
+const keepsmiling = require("keepsmiling"); // CommonJS
 ```
 
-在页面内直接引用
+在页面内直接引用：
 
 ```html
 <script src="./keepsmiling.min.js"></script>

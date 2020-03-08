@@ -18,7 +18,7 @@ node 需要 6.0 以上版本。
 
 ```bash
 
-$ https://github.com/moonbreezee/keepsmiling.git
+$ clone https://github.com/moonbreezee/keepsmiling.git
 
 $ cd keepsmiling
 
@@ -29,7 +29,7 @@ $ npm run dev
 
 ### 目录说明
 
-```bash
+```text
 keepsmiling
   |—— lib // 源文件目录
   |   |—— index.js // 入口文件
@@ -64,7 +64,7 @@ $ npm run publish 登录并发布代码
 修改 package 的 version，说明 CHANGELOG，然后登录与发布，需要本地执行`$ npm run publish`，提交之后执行。
 
 ```bash
-$ npm login
+npm login
 npm publish
 ```
 
@@ -116,3 +116,9 @@ no-useless-escape 不允许在字符串和正则表达式中使用无意义的�
 
 [github 地址](https://github.com/moonbreezee/keepsmiling.git)
 [npm 上包地址](https://www.npmjs.com/package/keepsmiling)
+
+## 2020-03-08，添加ts支持
+
+
+
+- 要支持单独引入，需要打包到dist/
