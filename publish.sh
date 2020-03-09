@@ -1,10 +1,9 @@
 # 发布代码
 # 发布流程，在develop且分支发布
 git checkout develop
-git flow release start v$0
 git add *
 git commit -m "add all v$0"
-git tag v$0
+git flow release start v$0
 # 语法检查
 # npm run eslint
 # 生成jsdoc
