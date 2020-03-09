@@ -1,6 +1,6 @@
 {
   "name": "keepsmiling",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "utils",
   "keywords": [
     "utils"
@@ -19,7 +19,7 @@
     "test": "npm run dist && node ./node_modules/karma/bin/karma start ./scripts/karma.conf.js",
     "eslint": "node ./node_modules/eslint/bin/eslint.js -c ./.eslintrc.js src/** --fix",
     "jsdoc": "node ./node_modules/jsdoc/jsdoc.js src/index.js -c ./scripts/jsdoc.conf.json -R README.md -r",
-    "publish": "sh publish.sh && npm run push-master",
+    "publish": "sh publish-script.sh && npm run push-master",
     "push-master": "sh push-master.sh"
   },
   "husky": {
