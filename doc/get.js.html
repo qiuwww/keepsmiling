@@ -48,10 +48,10 @@ var _is = require("./is.js");
  * @return {Function}
  */
 var getQueryString = function getQueryString() {
-  var str = arguments.length > 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : '';
+  var str = arguments.length > 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : "";
   var key = arguments.length > 1 ? arguments[1] : undefined;
-  str = str.includes('?') ? str.split('?')[1] : str;
-  var reg = new RegExp('(^|&amp;)' + key + '=([^&amp;]*)(&amp;|$)');
+  str = str.includes("?") ? str.split("?")[1] : str;
+  var reg = new RegExp("(^|&amp;)" + key + "=([^&amp;]*)(&amp;|$)");
   var r = str.match(reg);
 
   if (r != null) {
@@ -74,13 +74,13 @@ var getExplore = function getExplore() {
   var s;
   (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? sys.ie = s[1] : (s = ua.match(/msie ([\d\.]+)/)) ? sys.ie = s[1] : (s = ua.match(/edge\/([\d\.]+)/)) ? sys.edge = s[1] : (s = ua.match(/firefox\/([\d\.]+)/)) ? sys.firefox = s[1] : (s = ua.match(/(?:opera|opr).([\d\.]+)/)) ? sys.opera = s[1] : (s = ua.match(/chrome\/([\d\.]+)/)) ? sys.chrome = s[1] : (s = ua.match(/version\/([\d\.]+).*safari/)) ? sys.safari = s[1] : 0; // 根据关系进行判断
 
-  if (sys.ie) return 'IE: ' + sys.ie;
-  if (sys.edge) return 'EDGE: ' + sys.edge;
-  if (sys.firefox) return 'Firefox: ' + sys.firefox;
-  if (sys.chrome) return 'Chrome: ' + sys.chrome;
-  if (sys.opera) return 'Opera: ' + sys.opera;
-  if (sys.safari) return 'Safari: ' + sys.safari;
-  return 'Unkonwn';
+  if (sys.ie) return "IE: " + sys.ie;
+  if (sys.edge) return "EDGE: " + sys.edge;
+  if (sys.firefox) return "Firefox: " + sys.firefox;
+  if (sys.chrome) return "Chrome: " + sys.chrome;
+  if (sys.opera) return "Opera: " + sys.opera;
+  if (sys.safari) return "Safari: " + sys.safari;
+  return "Unkonwn";
 };
 /**
  * @desc 获取操作系统类型
@@ -91,14 +91,14 @@ var getExplore = function getExplore() {
 exports.getExplore = getExplore;
 
 var getBrowserOS = function getBrowserOS() {
-  var userAgent = 'navigator' in global &amp;&amp; 'userAgent' in navigator &amp;&amp; navigator.userAgent.toLowerCase() || '';
-  var appVersion = 'navigator' in global &amp;&amp; 'appVersion' in navigator &amp;&amp; navigator.appVersion.toLowerCase() || '';
-  if (/mac/i.test(appVersion)) return 'MacOSX';
-  if (/win/i.test(appVersion)) return 'windows';
-  if (/linux/i.test(appVersion)) return 'linux';
-  if (/iphone/i.test(userAgent) || /ipad/i.test(userAgent) || /ipod/i.test(userAgent)) 'ios';
-  if (/android/i.test(userAgent)) return 'android';
-  if (/win/i.test(appVersion) &amp;&amp; /phone/i.test(userAgent)) return 'windowsPhone';
+  var userAgent = "navigator" in global &amp;&amp; "userAgent" in navigator &amp;&amp; navigator.userAgent.toLowerCase() || "";
+  var appVersion = "navigator" in global &amp;&amp; "appVersion" in navigator &amp;&amp; navigator.appVersion.toLowerCase() || "";
+  if (/mac/i.test(appVersion)) return "MacOSX";
+  if (/win/i.test(appVersion)) return "windows";
+  if (/linux/i.test(appVersion)) return "linux";
+  if (/iphone/i.test(userAgent) || /ipad/i.test(userAgent) || /ipod/i.test(userAgent)) "ios";
+  if (/android/i.test(userAgent)) return "android";
+  if (/win/i.test(appVersion) &amp;&amp; /phone/i.test(userAgent)) return "windowsPhone";
 };
 /**
  * @description 获取滚动位置
@@ -135,9 +135,9 @@ var getScrollPos = function getScrollPos() {
 exports.getScrollPos = getScrollPos;
 
 var timeTaken = function timeTaken(callback) {
-  console.time('timeTaken');
+  console.time("timeTaken");
   var r = callback();
-  console.timeEnd('timeTaken');
+  console.timeEnd("timeTaken");
   return r;
 };
 /**
@@ -150,7 +150,7 @@ var timeTaken = function timeTaken(callback) {
 exports.timeTaken = timeTaken;
 
 var getRate = function getRate(rate) {
-  return '★★★★★☆☆☆☆☆'.slice(5 - rate, 10 - rate);
+  return "★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate);
 };
 /**
  * 函数执行有错误，查stackoverflow
@@ -164,7 +164,7 @@ var turnToStackoverflow = function turnToStackoverflow(func, context) {
   try {
     func.call(context);
   } catch (e) {
-    window.location.href = 'http://stackoverflow.com/search?q=[js]+' + e.message;
+    window.location.href = "http://stackoverflow.com/search?q=[js]+" + e.message;
   }
 };
 /**
@@ -183,17 +183,17 @@ exports.turnToStackoverflow = turnToStackoverflow;
 
 function parseUrl(url) {
   var result = {};
-  var keys = ['href', 'origin', 'protocol', 'host', 'hostname', 'port', 'pathname', 'search', 'hash'];
+  var keys = ["href", "origin", "protocol", "host", "hostname", "port", "pathname", "search", "hash"];
   var regexp = /(([^:]+:)\/\/(([^:\/\?#]+)(:\d+)?))(\/[^?#]*)?(\?[^#]*)?(#.*)?/;
   var match = regexp.exec(url);
 
   if (match) {
     for (var i = keys.length - 1; i >= 0; i--) {
-      result[keys[i]] = match[i] ? match[i] : '';
+      result[keys[i]] = match[i] ? match[i] : "";
     } // 单独处理port
 
 
-    result['port'] = result['port'].substr(1);
+    result["port"] = result["port"].substr(1);
   }
 
   return result;
@@ -232,7 +232,7 @@ function getPrime(str, end) {
 var getAbsoluteUrl = function () {
   var a;
   return function (url) {
-    if (!a) a = document.createElement('a');
+    if (!a) a = document.createElement("a");
     a.href = url;
     return a.href;
   };
@@ -254,7 +254,7 @@ exports.getAbsoluteUrl = getAbsoluteUrl;</code></pre>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Mon Mar 09 2020 20:54:55 GMT+0800 (GMT+08:00)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Mon Mar 09 2020 20:57:08 GMT+0800 (GMT+08:00)
 </footer>
 
 <script> prettyPrint(); </script>
