@@ -144,4 +144,4 @@ husky
 
 ## 提交流程
 
-先`sh push-master.sh`，再`sh publish.sh`。
+先`sh push-master.sh 版本号`，再`sh publish.sh`。
