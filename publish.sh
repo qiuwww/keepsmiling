@@ -16,6 +16,6 @@ npm login
 npm publish
 
 git add *
-git commit -m "add all v$0"
+git commit -m "add all v$0, publish done"
 git tag v$0
 git flow release finish v$0
