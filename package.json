@@ -1,6 +1,6 @@
 {
   "name": "keepsmiling",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "utils",
   "keywords": [
     "utils"
@@ -8,7 +8,7 @@
   "files": [
     "lib",
     "dist",
-    "doc"
+    "src"
   ],
   "main": "lib/index.js",
   "doc": "http://htmlpreview.github.io/?https://github.com/moonbreezee/keepsmiling/blob/master/doc/index.html",

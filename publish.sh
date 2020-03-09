@@ -13,5 +13,9 @@ npm run build
 npm run dist
 # 登录npm
 npm login
-# moonbreezee
+npm publish
+
+git add *
+git commit -m "add all v$0"
+git tag v$0
 git flow release finish v$0
