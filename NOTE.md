@@ -141,3 +141,7 @@ const { arrayMax } = keepsmiling;
 husky
 
 ### .travis
+
+## 提交流程
+
+先`sh push-master.sh`，再`sh publish.sh`。
