@@ -1,9 +1,9 @@
 # 发布代码
 # 发布流程，在develop且分支发布
 git checkout develop
-git flow release start $0
+git flow release start v$0
 git add *
-git commit -m "add all $0"
+git commit -m "add all v$0"
 git tag v$0
 # 语法检查
 # npm run eslint
@@ -15,4 +15,4 @@ npm run dist
 # 登录npm
 npm login
 # moonbreezee
-git flow release finish $0
+git flow release finish v$0
