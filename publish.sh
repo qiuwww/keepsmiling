@@ -1,12 +1,14 @@
+# 发布流程
 git add *
 git commit -m "add all"
 git checkout master
 # 语法检查
-npm run eslint
+# npm run eslint
 # 生成jsdoc
 npm run jsdoc
 # 生成压缩代码
-npm run dep
+npm run build
+npm run dist
 # 登录npm
 npm login
 # moonbreezee

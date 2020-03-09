@@ -1,27 +1,34 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>keepsmiling</title>
+  </head>
+  <body>
+    <style>
+      ul {
+        width: 100%;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
+      li {
+        width: 100%;
+      }
+    </style>
+    <h2>keepsmiling，这里用于开发中的功能测试，web</h2>
+    <ul class="func"></ul>
 
-<body>
-  <h2>keepsmiling</h2>
-  <ul class="func">
-
-  </ul>
-  <script type="text/javascript" src="/devserver/keepsmiling.js"></script>
-  <script type="text/javascript">
-    window.onload = function () {
-      var keys = Object.keys(keepsmiling);
-      var lis = keys.map(item => {
-        return `<li>${item}</li>`;
-      });
-      document.querySelector('.func').innerHTML = lis.join('');
-    }
-  </script>
-</body>
-
+    <script type="text/javascript">
+      window.onload = function() {
+        var keys = Object.keys(keepsmiling);
+        var lis = keys.map(item => {
+          return `<li><details><summary>${item}</summary>
+              <code>
+              ${JSON.stringify(keepsmiling[item].toString(), null, 2)}</code>
+              </details></li>`;
+        });
+        document.querySelector('.func').innerHTML = lis.join('');
+      };
+    </script>
+  </body>
 </html>

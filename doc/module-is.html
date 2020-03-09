@@ -58,7 +58,71 @@
 
         
             
-<h4 class="name" id=".isBrowserEnv"><span class="type-signature">(static, constant) </span>isBrowserEnv<span class="type-signature"></span></h4>
+<h4 class="name" id=".isObject"><span class="type-signature">(static) </span>isObject<span class="type-signature"></span></h4>
+
+
+<p class="summary"><p>检测是不是指数</p>.</p>
+
+
+
+<div class="description">
+    <p>检测是不是指数</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="is.js.html">is.js</a>, <a href="is.js.html#line168">line 168</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".typeJudg"><span class="type-signature">(static) </span>typeJudg<span class="type-signature"></span></h4>
 
 
 <p class="summary"><p>Only Node.JS has a process letiable that is of [[Class]] process</p></p>
@@ -104,7 +168,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="is.js.html">is.js</a>, <a href="is.js.html#line173">line 173</a>
+        <a href="is.js.html">is.js</a>, <a href="is.js.html#line206">line 206</a>
     </li></ul></dd>
     
 
@@ -122,15 +186,15 @@
 
         
             
-<h4 class="name" id=".isObject"><span class="type-signature">(static, constant) </span>isObject<span class="type-signature"></span></h4>
+<h4 class="name" id="~typeJudg"><span class="type-signature">(inner) </span>typeJudg<span class="type-signature"></span></h4>
 
 
-<p class="summary"><p>判断是纯对象（非数组，非函数）</p>.</p>
+<p class="summary"><p>添加js的类型判断函数</p>.</p>
 
 
 
 <div class="description">
-    <p>判断是纯对象（非数组，非函数）</p>
+    <p>添加js的类型判断函数</p>
 </div>
 
 
@@ -168,7 +232,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="is.js.html">is.js</a>, <a href="is.js.html#line130">line 130</a>
+        <a href="is.js.html">is.js</a>, <a href="is.js.html#line179">line 179</a>
     </li></ul></dd>
     
 
@@ -196,482 +260,7 @@
     
 
     
-    <h4 class="name" id=".isEmail"><span class="type-signature">(static) </span>isEmail<span class="signature">(str)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
-    
-
-    
-    <p class="summary"><p>判断是否为邮箱地址</p>.</p>
-    
-
-
-
-<div class="description">
-    <p>判断是否为邮箱地址</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>str</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>邮箱地址</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="is.js.html">is.js</a>, <a href="is.js.html#line19">line 19</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Boolean</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id=".isEmptyObject"><span class="type-signature">(static) </span>isEmptyObject<span class="signature">(obj)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
-    
-
-    
-    <p class="summary"><p>判断<code>obj</code>是否为空</p>.</p>
-    
-
-
-
-<div class="description">
-    <p>判断<code>obj</code>是否为空</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>obj</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>object</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="is.js.html">is.js</a>, <a href="is.js.html#line9">line 9</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Boolean</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id=".isIdCard"><span class="type-signature">(static) </span>isIdCard<span class="signature">(code)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-    <p class="summary"><p>判断是否为身份证号</p>.</p>
-    
-
-
-
-<div class="description">
-    <p>判断是否为身份证号</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>code</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>身份证号</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="is.js.html">is.js</a>, <a href="is.js.html#line27">line 27</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <p>包括返回结果的状态及提示信息</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id=".isPalindrome"><span class="type-signature">(static) </span>isPalindrome<span class="signature">(str)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    <h4 class="name" id=".isBrowserEnv"><span class="type-signature">(static) </span>isBrowserEnv<span class="signature">(str)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
     
 
     
@@ -774,7 +363,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="is.js.html">is.js</a>, <a href="is.js.html#line188">line 188</a>
+        <a href="is.js.html">is.js</a>, <a href="is.js.html#line224">line 224</a>
     </li></ul></dd>
     
 
@@ -840,7 +429,639 @@ isPalindrome("levels");
     
 
     
-    <h4 class="name" id=".isPhoneNum"><span class="type-signature">(static) </span>isPhoneNum<span class="signature">(str)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    <h4 class="name" id="~isEmail"><span class="type-signature">(inner) </span>isEmail<span class="signature">(str)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+    <p class="summary"><p>判断是否为邮箱地址</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>判断是否为邮箱地址</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>邮箱地址</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="is.js.html">is.js</a>, <a href="is.js.html#line39">line 39</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~isEmptyObject"><span class="type-signature">(inner) </span>isEmptyObject<span class="signature">(obj)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+    <p class="summary"><p>判断<code>obj</code>是否为空</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>判断<code>obj</code>是否为空</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="is.js.html">is.js</a>, <a href="is.js.html#line28">line 28</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~isIdCard"><span class="type-signature">(inner) </span>isIdCard<span class="signature">(code)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+    <p class="summary"><p>判断是否为身份证号</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>判断是否为身份证号</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>code</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>身份证号</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="is.js.html">is.js</a>, <a href="is.js.html#line49">line 49</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>包括返回结果的状态及提示信息</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~isObject"><span class="type-signature">(inner) </span>isObject<span class="signature">(obj)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+    <p class="summary"><p>判断是纯对象（非数组，非函数）</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>判断是纯对象（非数组，非函数）</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>需要判断的对象</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="is.js.html">is.js</a>, <a href="is.js.html#line155">line 155</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~isPhoneNum"><span class="type-signature">(inner) </span>isPhoneNum<span class="signature">(str)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
     
 
     
@@ -943,7 +1164,7 @@ isPalindrome("levels");
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="is.js.html">is.js</a>, <a href="is.js.html#line109">line 109</a>
+        <a href="is.js.html">is.js</a>, <a href="is.js.html#line135">line 135</a>
     </li></ul></dd>
     
 
@@ -991,143 +1212,6 @@ isPalindrome("levels");
 
 
 
-        
-            
-
-    
-
-    
-    <h4 class="name" id=".isPrime"><span class="type-signature">(static) </span>isPrime<span class="signature">(n)</span><span class="type-signature"></span></h4>
-    
-
-    
-    <p class="summary"><p>检测是不是指数</p>.</p>
-    
-
-
-
-<div class="description">
-    <p>检测是不是指数</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>n</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>需要判断的数值</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="is.js.html">is.js</a>, <a href="is.js.html#line142">line 142</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         
@@ -1136,7 +1220,7 @@ isPalindrome("levels");
     
 
     
-    <h4 class="name" id=".isUrl"><span class="type-signature">(static) </span>isUrl<span class="signature">(str)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    <h4 class="name" id="~isUrl"><span class="type-signature">(inner) </span>isUrl<span class="signature">(str)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
     
 
     
@@ -1239,7 +1323,7 @@ isPalindrome("levels");
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="is.js.html">is.js</a>, <a href="is.js.html#line119">line 119</a>
+        <a href="is.js.html">is.js</a>, <a href="is.js.html#line145">line 145</a>
     </li></ul></dd>
     
 
@@ -1303,13 +1387,17 @@ isPalindrome("levels");
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-array.html">array</a></li><li><a href="module-format.html">format</a></li><li><a href="module-get.html">get</a></li><li><a href="module-is.html">is</a></li><li><a href="module-keycode.html">keycode</a></li><li><a href="module-random.html">random</a></li><li><a href="module-storage.html">storage</a></li><li><a href="module-string.html">string</a></li></ul><h3>Global</h3><ul><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#extendObj">extendObj</a></li><li><a href="global.html#objectCopyData">objectCopyData</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#throttle">throttle</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-array.html">array</a></li><li><a href="module-format.html">format</a></li><li><a href="module-get.html">get</a></li><li><a href="module-is.html">is</a></li><li><a href="module-keycode.html">keycode</a></li><li><a href="module-object.html">object</a></li><li><a href="module-random.html">random</a></li></ul><h3>Global</h3><ul><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#objectCopyData">objectCopyData</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#throttle">throttle</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
+<<<<<<< HEAD
     Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Mon Mar 09 2020 17:51:46 GMT+0800 (GMT+08:00)
+=======
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Mon Mar 09 2020 17:41:15 GMT+0800 (GMT+08:00)
+>>>>>>> develop
 </footer>
 
 <script> prettyPrint(); </script>

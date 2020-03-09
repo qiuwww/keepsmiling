@@ -2,9 +2,11 @@ coverage/
 doc/
 static/
 .editorconfig
-NOTES.md
+NOTE.md
 .travis.yml
 .eslintignore
+.eslint
 demo/
 publish.sh
 push-master.sh
+tsconfig.json

@@ -64,7 +64,508 @@
     
 
     
-    <h4 class="name" id=".digitUppercase"><span class="type-signature">(static) </span>digitUppercase<span class="signature">(n)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    <h4 class="name" id="~arrayAverage"><span class="type-signature">(inner) </span>arrayAverage<span class="signature">(arr)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+    <p class="summary"><p>获取数组的平均值</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>获取数组的平均值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>输入数组</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayAverage.js.html">array/arrayAverage.js</a>, <a href="array_arrayAverage.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回数组的平均值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayAverage([1,2,3]);
+// returns 2</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayFibonacci"><span class="type-signature">(inner) </span>arrayFibonacci<span class="signature">(n)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Array.reduce（）向数组中添加值，后面的一个数等于前面两个数相加之和（前两个除外）。</p></p>
+    
+
+
+
+<div class="description">
+    <p>斐波那契数组</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>创建一个特定长度的空数组，初始化前两个值（0和1）。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayFibonacci.js.html">array/arrayFibonacci.js</a>, <a href="array_arrayFibonacci.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回斐波那契数组的指定长度</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayFibonacci(5)
+// returns [0,1,1,2,3]</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayMax"><span class="type-signature">(inner) </span>arrayMax<span class="signature">(arr)</span><span class="type-signature"> &rarr; {Nummber}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Math.max（）与spread运算符（...）结合得到数组中的最大值。</p></p>
+    
+
+
+
+<div class="description">
+    <p>从数组中获取最大值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>传入的数组，通过...运算，展开为一组数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayMax.js.html">array/arrayMax.js</a>, <a href="array_arrayMax.js.html#line26">line 26</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回当前数组的最大值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Nummber</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayMax([10, 1, 5]);
+// returns 10</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~digitUppercase"><span class="type-signature">(inner) </span>digitUppercase<span class="signature">(n)</span><span class="type-signature"> &rarr; {String}</span></h4>
     
 
     
@@ -167,7 +668,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="format.js.html">format.js</a>, <a href="format.js.html#line12">line 12</a>
+        <a href="format_digitUppercase.js.html">format/digitUppercase.js</a>, <a href="format_digitUppercase.js.html#line20">line 20</a>
     </li></ul></dd>
     
 
@@ -227,7 +728,7 @@
     
 
     
-    <h4 class="name" id=".formatPassTime"><span class="type-signature">(static) </span>formatPassTime<span class="signature">(startTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    <h4 class="name" id="~formatPassTime"><span class="type-signature">(inner) </span>formatPassTime<span class="signature">(startTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
     
 
     
@@ -330,7 +831,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="format.js.html">format.js</a>, <a href="format.js.html#line54">line 54</a>
+        <a href="format_formatPassTime.js.html">format/formatPassTime.js</a>, <a href="format_formatPassTime.js.html#line20">line 20</a>
     </li></ul></dd>
     
 
@@ -396,7 +897,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
     
 
     
-    <h4 class="name" id=".formatRemainTime"><span class="type-signature">(static) </span>formatRemainTime<span class="signature">(endTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    <h4 class="name" id="~formatRemainTime"><span class="type-signature">(inner) </span>formatRemainTime<span class="signature">(endTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
     
 
     
@@ -499,7 +1000,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="format.js.html">format.js</a>, <a href="format.js.html#line75">line 75</a>
+        <a href="format_formatRemainTime.js.html">format/formatRemainTime.js</a>, <a href="format_formatRemainTime.js.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -553,7 +1054,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
     
 
     
-    <h4 class="name" id=".thousandsSeparator"><span class="type-signature">(static) </span>thousandsSeparator<span class="signature">(num, fixNum)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    <h4 class="name" id="~thousandsSeparator"><span class="type-signature">(inner) </span>thousandsSeparator<span class="signature">(num, fixNum)</span><span class="type-signature"> &rarr; {string}</span></h4>
     
 
     
@@ -679,7 +1180,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="format.js.html">format.js</a>, <a href="format.js.html#line101">line 101</a>
+        <a href="format_thousandsSeparator.js.html">format/thousandsSeparator.js</a>, <a href="format_thousandsSeparator.js.html#line21">line 21</a>
     </li></ul></dd>
     
 
@@ -743,7 +1244,7 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
     
 
     
-    <h4 class="name" id=".trim"><span class="type-signature">(static) </span>trim<span class="signature">(str)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    <h4 class="name" id="~trim"><span class="type-signature">(inner) </span>trim<span class="signature">(str)</span><span class="type-signature"> &rarr; {String}</span></h4>
     
 
     
@@ -846,7 +1347,9744 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="format.js.html">format.js</a>, <a href="format.js.html#line116">line 116</a>
+        <a href="format_trim.js.html">format/trim.js</a>, <a href="format_trim.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回一个字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+<header>
+    
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayAverage"><span class="type-signature">(inner) </span>arrayAverage<span class="signature">(arr)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+    <p class="summary"><p>获取数组的平均值</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>获取数组的平均值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>输入数组</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayAverage.js.html">array/arrayAverage.js</a>, <a href="array_arrayAverage.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回数组的平均值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayAverage([1,2,3]);
+// returns 2</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayFibonacci"><span class="type-signature">(inner) </span>arrayFibonacci<span class="signature">(n)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Array.reduce（）向数组中添加值，后面的一个数等于前面两个数相加之和（前两个除外）。</p></p>
+    
+
+
+
+<div class="description">
+    <p>斐波那契数组</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>创建一个特定长度的空数组，初始化前两个值（0和1）。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayFibonacci.js.html">array/arrayFibonacci.js</a>, <a href="array_arrayFibonacci.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回斐波那契数组的指定长度</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayFibonacci(5)
+// returns [0,1,1,2,3]</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayMax"><span class="type-signature">(inner) </span>arrayMax<span class="signature">(arr)</span><span class="type-signature"> &rarr; {Nummber}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Math.max（）与spread运算符（...）结合得到数组中的最大值。</p></p>
+    
+
+
+
+<div class="description">
+    <p>从数组中获取最大值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>传入的数组，通过...运算，展开为一组数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayMax.js.html">array/arrayMax.js</a>, <a href="array_arrayMax.js.html#line26">line 26</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回当前数组的最大值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Nummber</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayMax([10, 1, 5]);
+// returns 10</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~digitUppercase"><span class="type-signature">(inner) </span>digitUppercase<span class="signature">(n)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>现金额转大写</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>现金额转大写</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>金额</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_digitUppercase.js.html">format/digitUppercase.js</a>, <a href="format_digitUppercase.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>digitUppercase(1000292);
+// "壹佰万零贰佰玖拾贰元整"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatPassTime"><span class="type-signature">(inner) </span>formatPassTime<span class="signature">(startTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化${startTime}距现在的已过时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化${startTime}距现在的已过时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>startTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>现在的时间，格式是距今的毫秒数, 或者字符串型的描述</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatPassTime.js.html">format/formatPassTime.js</a>, <a href="format_formatPassTime.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>返回一段描述的语句</li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>formatPassTime('2018/12/12'); // 默认是时间对应的格式
+formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatRemainTime"><span class="type-signature">(inner) </span>formatRemainTime<span class="signature">(endTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化现在距${endTime}的剩余时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化现在距${endTime}的剩余时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>endTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>剩余时间的截止日期</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatRemainTime.js.html">format/formatRemainTime.js</a>, <a href="format_formatRemainTime.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~thousandsSeparator"><span class="type-signature">(inner) </span>thousandsSeparator<span class="signature">(num, fixNum)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+    <p class="summary"><p>添加千分位，顺便固定小数位</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>添加千分位，顺便固定小数位</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>num</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>数值型的值</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fixNum</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>保留的小数位</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_thousandsSeparator.js.html">format/thousandsSeparator.js</a>, <a href="format_thousandsSeparator.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回结果字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>thousandsSeparator(123123123.4513212, 2);
+// returns "123,123,123.45"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~trim"><span class="type-signature">(inner) </span>trim<span class="signature">(str)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>去除字符串两端的空格</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>去除字符串两端的空格</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_trim.js.html">format/trim.js</a>, <a href="format_trim.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回一个字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+<header>
+    
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayAverage"><span class="type-signature">(inner) </span>arrayAverage<span class="signature">(arr)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+    <p class="summary"><p>获取数组的平均值</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>获取数组的平均值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>输入数组</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayAverage.js.html">array/arrayAverage.js</a>, <a href="array_arrayAverage.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回数组的平均值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayAverage([1,2,3]);
+// returns 2</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayFibonacci"><span class="type-signature">(inner) </span>arrayFibonacci<span class="signature">(n)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Array.reduce（）向数组中添加值，后面的一个数等于前面两个数相加之和（前两个除外）。</p></p>
+    
+
+
+
+<div class="description">
+    <p>斐波那契数组</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>创建一个特定长度的空数组，初始化前两个值（0和1）。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayFibonacci.js.html">array/arrayFibonacci.js</a>, <a href="array_arrayFibonacci.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回斐波那契数组的指定长度</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayFibonacci(5)
+// returns [0,1,1,2,3]</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayMax"><span class="type-signature">(inner) </span>arrayMax<span class="signature">(arr)</span><span class="type-signature"> &rarr; {Nummber}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Math.max（）与spread运算符（...）结合得到数组中的最大值。</p></p>
+    
+
+
+
+<div class="description">
+    <p>从数组中获取最大值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>传入的数组，通过...运算，展开为一组数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayMax.js.html">array/arrayMax.js</a>, <a href="array_arrayMax.js.html#line26">line 26</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回当前数组的最大值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Nummber</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayMax([10, 1, 5]);
+// returns 10</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~digitUppercase"><span class="type-signature">(inner) </span>digitUppercase<span class="signature">(n)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>现金额转大写</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>现金额转大写</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>金额</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_digitUppercase.js.html">format/digitUppercase.js</a>, <a href="format_digitUppercase.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>digitUppercase(1000292);
+// "壹佰万零贰佰玖拾贰元整"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatPassTime"><span class="type-signature">(inner) </span>formatPassTime<span class="signature">(startTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化${startTime}距现在的已过时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化${startTime}距现在的已过时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>startTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>现在的时间，格式是距今的毫秒数, 或者字符串型的描述</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatPassTime.js.html">format/formatPassTime.js</a>, <a href="format_formatPassTime.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>返回一段描述的语句</li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>formatPassTime('2018/12/12'); // 默认是时间对应的格式
+formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatRemainTime"><span class="type-signature">(inner) </span>formatRemainTime<span class="signature">(endTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化现在距${endTime}的剩余时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化现在距${endTime}的剩余时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>endTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>剩余时间的截止日期</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatRemainTime.js.html">format/formatRemainTime.js</a>, <a href="format_formatRemainTime.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~thousandsSeparator"><span class="type-signature">(inner) </span>thousandsSeparator<span class="signature">(num, fixNum)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+    <p class="summary"><p>添加千分位，顺便固定小数位</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>添加千分位，顺便固定小数位</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>num</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>数值型的值</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fixNum</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>保留的小数位</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_thousandsSeparator.js.html">format/thousandsSeparator.js</a>, <a href="format_thousandsSeparator.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回结果字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>thousandsSeparator(123123123.4513212, 2);
+// returns "123,123,123.45"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~trim"><span class="type-signature">(inner) </span>trim<span class="signature">(str)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>去除字符串两端的空格</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>去除字符串两端的空格</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_trim.js.html">format/trim.js</a>, <a href="format_trim.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回一个字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+<header>
+    
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayAverage"><span class="type-signature">(inner) </span>arrayAverage<span class="signature">(arr)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+    <p class="summary"><p>获取数组的平均值</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>获取数组的平均值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>输入数组</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayAverage.js.html">array/arrayAverage.js</a>, <a href="array_arrayAverage.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回数组的平均值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayAverage([1,2,3]);
+// returns 2</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayFibonacci"><span class="type-signature">(inner) </span>arrayFibonacci<span class="signature">(n)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Array.reduce（）向数组中添加值，后面的一个数等于前面两个数相加之和（前两个除外）。</p></p>
+    
+
+
+
+<div class="description">
+    <p>斐波那契数组</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>创建一个特定长度的空数组，初始化前两个值（0和1）。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayFibonacci.js.html">array/arrayFibonacci.js</a>, <a href="array_arrayFibonacci.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回斐波那契数组的指定长度</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayFibonacci(5)
+// returns [0,1,1,2,3]</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayMax"><span class="type-signature">(inner) </span>arrayMax<span class="signature">(arr)</span><span class="type-signature"> &rarr; {Nummber}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Math.max（）与spread运算符（...）结合得到数组中的最大值。</p></p>
+    
+
+
+
+<div class="description">
+    <p>从数组中获取最大值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>传入的数组，通过...运算，展开为一组数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayMax.js.html">array/arrayMax.js</a>, <a href="array_arrayMax.js.html#line26">line 26</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回当前数组的最大值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Nummber</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayMax([10, 1, 5]);
+// returns 10</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~digitUppercase"><span class="type-signature">(inner) </span>digitUppercase<span class="signature">(n)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>现金额转大写</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>现金额转大写</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>金额</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_digitUppercase.js.html">format/digitUppercase.js</a>, <a href="format_digitUppercase.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>digitUppercase(1000292);
+// "壹佰万零贰佰玖拾贰元整"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatPassTime"><span class="type-signature">(inner) </span>formatPassTime<span class="signature">(startTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化${startTime}距现在的已过时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化${startTime}距现在的已过时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>startTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>现在的时间，格式是距今的毫秒数, 或者字符串型的描述</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatPassTime.js.html">format/formatPassTime.js</a>, <a href="format_formatPassTime.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>返回一段描述的语句</li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>formatPassTime('2018/12/12'); // 默认是时间对应的格式
+formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatRemainTime"><span class="type-signature">(inner) </span>formatRemainTime<span class="signature">(endTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化现在距${endTime}的剩余时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化现在距${endTime}的剩余时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>endTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>剩余时间的截止日期</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatRemainTime.js.html">format/formatRemainTime.js</a>, <a href="format_formatRemainTime.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~thousandsSeparator"><span class="type-signature">(inner) </span>thousandsSeparator<span class="signature">(num, fixNum)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+    <p class="summary"><p>添加千分位，顺便固定小数位</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>添加千分位，顺便固定小数位</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>num</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>数值型的值</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fixNum</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>保留的小数位</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_thousandsSeparator.js.html">format/thousandsSeparator.js</a>, <a href="format_thousandsSeparator.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回结果字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>thousandsSeparator(123123123.4513212, 2);
+// returns "123,123,123.45"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~trim"><span class="type-signature">(inner) </span>trim<span class="signature">(str)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>去除字符串两端的空格</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>去除字符串两端的空格</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_trim.js.html">format/trim.js</a>, <a href="format_trim.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回一个字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+<header>
+    
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayAverage"><span class="type-signature">(inner) </span>arrayAverage<span class="signature">(arr)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+    <p class="summary"><p>获取数组的平均值</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>获取数组的平均值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>输入数组</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayAverage.js.html">array/arrayAverage.js</a>, <a href="array_arrayAverage.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回数组的平均值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayAverage([1,2,3]);
+// returns 2</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayFibonacci"><span class="type-signature">(inner) </span>arrayFibonacci<span class="signature">(n)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Array.reduce（）向数组中添加值，后面的一个数等于前面两个数相加之和（前两个除外）。</p></p>
+    
+
+
+
+<div class="description">
+    <p>斐波那契数组</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>创建一个特定长度的空数组，初始化前两个值（0和1）。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayFibonacci.js.html">array/arrayFibonacci.js</a>, <a href="array_arrayFibonacci.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回斐波那契数组的指定长度</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayFibonacci(5)
+// returns [0,1,1,2,3]</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayMax"><span class="type-signature">(inner) </span>arrayMax<span class="signature">(arr)</span><span class="type-signature"> &rarr; {Nummber}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Math.max（）与spread运算符（...）结合得到数组中的最大值。</p></p>
+    
+
+
+
+<div class="description">
+    <p>从数组中获取最大值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>传入的数组，通过...运算，展开为一组数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayMax.js.html">array/arrayMax.js</a>, <a href="array_arrayMax.js.html#line26">line 26</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回当前数组的最大值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Nummber</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayMax([10, 1, 5]);
+// returns 10</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~digitUppercase"><span class="type-signature">(inner) </span>digitUppercase<span class="signature">(n)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>现金额转大写</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>现金额转大写</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>金额</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_digitUppercase.js.html">format/digitUppercase.js</a>, <a href="format_digitUppercase.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>digitUppercase(1000292);
+// "壹佰万零贰佰玖拾贰元整"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatPassTime"><span class="type-signature">(inner) </span>formatPassTime<span class="signature">(startTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化${startTime}距现在的已过时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化${startTime}距现在的已过时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>startTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>现在的时间，格式是距今的毫秒数, 或者字符串型的描述</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatPassTime.js.html">format/formatPassTime.js</a>, <a href="format_formatPassTime.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>返回一段描述的语句</li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>formatPassTime('2018/12/12'); // 默认是时间对应的格式
+formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatRemainTime"><span class="type-signature">(inner) </span>formatRemainTime<span class="signature">(endTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化现在距${endTime}的剩余时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化现在距${endTime}的剩余时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>endTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>剩余时间的截止日期</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatRemainTime.js.html">format/formatRemainTime.js</a>, <a href="format_formatRemainTime.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~thousandsSeparator"><span class="type-signature">(inner) </span>thousandsSeparator<span class="signature">(num, fixNum)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+    <p class="summary"><p>添加千分位，顺便固定小数位</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>添加千分位，顺便固定小数位</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>num</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>数值型的值</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fixNum</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>保留的小数位</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_thousandsSeparator.js.html">format/thousandsSeparator.js</a>, <a href="format_thousandsSeparator.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回结果字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>thousandsSeparator(123123123.4513212, 2);
+// returns "123,123,123.45"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~trim"><span class="type-signature">(inner) </span>trim<span class="signature">(str)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>去除字符串两端的空格</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>去除字符串两端的空格</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_trim.js.html">format/trim.js</a>, <a href="format_trim.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回一个字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+<header>
+    
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayAverage"><span class="type-signature">(inner) </span>arrayAverage<span class="signature">(arr)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+    <p class="summary"><p>获取数组的平均值</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>获取数组的平均值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>输入数组</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayAverage.js.html">array/arrayAverage.js</a>, <a href="array_arrayAverage.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回数组的平均值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayAverage([1,2,3]);
+// returns 2</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayFibonacci"><span class="type-signature">(inner) </span>arrayFibonacci<span class="signature">(n)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Array.reduce（）向数组中添加值，后面的一个数等于前面两个数相加之和（前两个除外）。</p></p>
+    
+
+
+
+<div class="description">
+    <p>斐波那契数组</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>创建一个特定长度的空数组，初始化前两个值（0和1）。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayFibonacci.js.html">array/arrayFibonacci.js</a>, <a href="array_arrayFibonacci.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回斐波那契数组的指定长度</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayFibonacci(5)
+// returns [0,1,1,2,3]</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayMax"><span class="type-signature">(inner) </span>arrayMax<span class="signature">(arr)</span><span class="type-signature"> &rarr; {Nummber}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Math.max（）与spread运算符（...）结合得到数组中的最大值。</p></p>
+    
+
+
+
+<div class="description">
+    <p>从数组中获取最大值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>传入的数组，通过...运算，展开为一组数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayMax.js.html">array/arrayMax.js</a>, <a href="array_arrayMax.js.html#line26">line 26</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回当前数组的最大值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Nummber</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayMax([10, 1, 5]);
+// returns 10</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~digitUppercase"><span class="type-signature">(inner) </span>digitUppercase<span class="signature">(n)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>现金额转大写</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>现金额转大写</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>金额</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_digitUppercase.js.html">format/digitUppercase.js</a>, <a href="format_digitUppercase.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>digitUppercase(1000292);
+// "壹佰万零贰佰玖拾贰元整"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatPassTime"><span class="type-signature">(inner) </span>formatPassTime<span class="signature">(startTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化${startTime}距现在的已过时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化${startTime}距现在的已过时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>startTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>现在的时间，格式是距今的毫秒数, 或者字符串型的描述</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatPassTime.js.html">format/formatPassTime.js</a>, <a href="format_formatPassTime.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>返回一段描述的语句</li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>formatPassTime('2018/12/12'); // 默认是时间对应的格式
+formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatRemainTime"><span class="type-signature">(inner) </span>formatRemainTime<span class="signature">(endTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化现在距${endTime}的剩余时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化现在距${endTime}的剩余时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>endTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>剩余时间的截止日期</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatRemainTime.js.html">format/formatRemainTime.js</a>, <a href="format_formatRemainTime.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~thousandsSeparator"><span class="type-signature">(inner) </span>thousandsSeparator<span class="signature">(num, fixNum)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+    <p class="summary"><p>添加千分位，顺便固定小数位</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>添加千分位，顺便固定小数位</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>num</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>数值型的值</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fixNum</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>保留的小数位</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_thousandsSeparator.js.html">format/thousandsSeparator.js</a>, <a href="format_thousandsSeparator.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回结果字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>thousandsSeparator(123123123.4513212, 2);
+// returns "123,123,123.45"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~trim"><span class="type-signature">(inner) </span>trim<span class="signature">(str)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>去除字符串两端的空格</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>去除字符串两端的空格</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_trim.js.html">format/trim.js</a>, <a href="format_trim.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回一个字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+<header>
+    
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayAverage"><span class="type-signature">(inner) </span>arrayAverage<span class="signature">(arr)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+    <p class="summary"><p>获取数组的平均值</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>获取数组的平均值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>输入数组</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayAverage.js.html">array/arrayAverage.js</a>, <a href="array_arrayAverage.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回数组的平均值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayAverage([1,2,3]);
+// returns 2</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayFibonacci"><span class="type-signature">(inner) </span>arrayFibonacci<span class="signature">(n)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Array.reduce（）向数组中添加值，后面的一个数等于前面两个数相加之和（前两个除外）。</p></p>
+    
+
+
+
+<div class="description">
+    <p>斐波那契数组</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>创建一个特定长度的空数组，初始化前两个值（0和1）。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayFibonacci.js.html">array/arrayFibonacci.js</a>, <a href="array_arrayFibonacci.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回斐波那契数组的指定长度</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayFibonacci(5)
+// returns [0,1,1,2,3]</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayMax"><span class="type-signature">(inner) </span>arrayMax<span class="signature">(arr)</span><span class="type-signature"> &rarr; {Nummber}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Math.max（）与spread运算符（...）结合得到数组中的最大值。</p></p>
+    
+
+
+
+<div class="description">
+    <p>从数组中获取最大值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>传入的数组，通过...运算，展开为一组数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayMax.js.html">array/arrayMax.js</a>, <a href="array_arrayMax.js.html#line26">line 26</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回当前数组的最大值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Nummber</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayMax([10, 1, 5]);
+// returns 10</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~digitUppercase"><span class="type-signature">(inner) </span>digitUppercase<span class="signature">(n)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>现金额转大写</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>现金额转大写</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>金额</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_digitUppercase.js.html">format/digitUppercase.js</a>, <a href="format_digitUppercase.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>digitUppercase(1000292);
+// "壹佰万零贰佰玖拾贰元整"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatPassTime"><span class="type-signature">(inner) </span>formatPassTime<span class="signature">(startTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化${startTime}距现在的已过时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化${startTime}距现在的已过时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>startTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>现在的时间，格式是距今的毫秒数, 或者字符串型的描述</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatPassTime.js.html">format/formatPassTime.js</a>, <a href="format_formatPassTime.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>返回一段描述的语句</li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>formatPassTime('2018/12/12'); // 默认是时间对应的格式
+formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatRemainTime"><span class="type-signature">(inner) </span>formatRemainTime<span class="signature">(endTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化现在距${endTime}的剩余时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化现在距${endTime}的剩余时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>endTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>剩余时间的截止日期</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatRemainTime.js.html">format/formatRemainTime.js</a>, <a href="format_formatRemainTime.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~thousandsSeparator"><span class="type-signature">(inner) </span>thousandsSeparator<span class="signature">(num, fixNum)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+    <p class="summary"><p>添加千分位，顺便固定小数位</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>添加千分位，顺便固定小数位</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>num</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>数值型的值</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fixNum</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>保留的小数位</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_thousandsSeparator.js.html">format/thousandsSeparator.js</a>, <a href="format_thousandsSeparator.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回结果字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>thousandsSeparator(123123123.4513212, 2);
+// returns "123,123,123.45"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~trim"><span class="type-signature">(inner) </span>trim<span class="signature">(str)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>去除字符串两端的空格</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>去除字符串两端的空格</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_trim.js.html">format/trim.js</a>, <a href="format_trim.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回一个字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+<header>
+    
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayAverage"><span class="type-signature">(inner) </span>arrayAverage<span class="signature">(arr)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+    <p class="summary"><p>获取数组的平均值</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>获取数组的平均值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>输入数组</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayAverage.js.html">array/arrayAverage.js</a>, <a href="array_arrayAverage.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回数组的平均值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayAverage([1,2,3]);
+// returns 2</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayFibonacci"><span class="type-signature">(inner) </span>arrayFibonacci<span class="signature">(n)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Array.reduce（）向数组中添加值，后面的一个数等于前面两个数相加之和（前两个除外）。</p></p>
+    
+
+
+
+<div class="description">
+    <p>斐波那契数组</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>创建一个特定长度的空数组，初始化前两个值（0和1）。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayFibonacci.js.html">array/arrayFibonacci.js</a>, <a href="array_arrayFibonacci.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回斐波那契数组的指定长度</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayFibonacci(5)
+// returns [0,1,1,2,3]</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~arrayMax"><span class="type-signature">(inner) </span>arrayMax<span class="signature">(arr)</span><span class="type-signature"> &rarr; {Nummber}</span></h4>
+    
+
+    
+    <p class="summary"><p>使用Math.max（）与spread运算符（...）结合得到数组中的最大值。</p></p>
+    
+
+
+
+<div class="description">
+    <p>从数组中获取最大值</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>传入的数组，通过...运算，展开为一组数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="array_arrayMax.js.html">array/arrayMax.js</a>, <a href="array_arrayMax.js.html#line26">line 26</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回当前数组的最大值</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Nummber</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>arrayMax([10, 1, 5]);
+// returns 10</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~digitUppercase"><span class="type-signature">(inner) </span>digitUppercase<span class="signature">(n)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>现金额转大写</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>现金额转大写</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>金额</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_digitUppercase.js.html">format/digitUppercase.js</a>, <a href="format_digitUppercase.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>digitUppercase(1000292);
+// "壹佰万零贰佰玖拾贰元整"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatPassTime"><span class="type-signature">(inner) </span>formatPassTime<span class="signature">(startTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化${startTime}距现在的已过时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化${startTime}距现在的已过时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>startTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>现在的时间，格式是距今的毫秒数, 或者字符串型的描述</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatPassTime.js.html">format/formatPassTime.js</a>, <a href="format_formatPassTime.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>返回一段描述的语句</li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>formatPassTime('2018/12/12'); // 默认是时间对应的格式
+formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~formatRemainTime"><span class="type-signature">(inner) </span>formatRemainTime<span class="signature">(endTime)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>格式化现在距${endTime}的剩余时间</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>格式化现在距${endTime}的剩余时间</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>endTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>剩余时间的截止日期</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_formatRemainTime.js.html">format/formatRemainTime.js</a>, <a href="format_formatRemainTime.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~thousandsSeparator"><span class="type-signature">(inner) </span>thousandsSeparator<span class="signature">(num, fixNum)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+    <p class="summary"><p>添加千分位，顺便固定小数位</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>添加千分位，顺便固定小数位</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>num</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>数值型的值</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fixNum</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>保留的小数位</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_thousandsSeparator.js.html">format/thousandsSeparator.js</a>, <a href="format_thousandsSeparator.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回结果字符串</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>thousandsSeparator(123123123.4513212, 2);
+// returns "123,123,123.45"</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="~trim"><span class="type-signature">(inner) </span>trim<span class="signature">(str)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+    <p class="summary"><p>去除字符串两端的空格</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>去除字符串两端的空格</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>字符串</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="format_trim.js.html">format/trim.js</a>, <a href="format_trim.js.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -914,13 +11152,17 @@ formatPassTime(1542200418000); // 数值型，默认是毫秒数</code></pre>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-array.html">array</a></li><li><a href="module-format.html">format</a></li><li><a href="module-get.html">get</a></li><li><a href="module-is.html">is</a></li><li><a href="module-keycode.html">keycode</a></li><li><a href="module-random.html">random</a></li><li><a href="module-storage.html">storage</a></li><li><a href="module-string.html">string</a></li></ul><h3>Global</h3><ul><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#extendObj">extendObj</a></li><li><a href="global.html#objectCopyData">objectCopyData</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#throttle">throttle</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-array.html">array</a></li><li><a href="module-format.html">format</a></li><li><a href="module-get.html">get</a></li><li><a href="module-is.html">is</a></li><li><a href="module-keycode.html">keycode</a></li><li><a href="module-object.html">object</a></li><li><a href="module-random.html">random</a></li></ul><h3>Global</h3><ul><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#objectCopyData">objectCopyData</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#throttle">throttle</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
+<<<<<<< HEAD
     Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Mon Mar 09 2020 17:51:46 GMT+0800 (GMT+08:00)
+=======
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Mon Mar 09 2020 17:41:15 GMT+0800 (GMT+08:00)
+>>>>>>> develop
 </footer>
 
 <script> prettyPrint(); </script>

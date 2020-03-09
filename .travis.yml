@@ -1,6 +1,27 @@
-# .travis.yml
-# 是一个YAML文件，关于node.js相关的配置
 language: node_js
 node_js:
-   - "6.0"
-services:
+  - '8'
+before_install:
+  - sudo apt-get install google-chrome-stable
+install:
+  - yarn install
+script:
+  - yarn run test
+after_success:
+  - cat ./coverage/lcov.info | node_modules/.bin/coveralls --verbose
+  - rm -rf ./coverage
+branches:
+  only:
+    - master
+    - publish
+    - develop
+before_deploy:
+  - npm run build
+  - rm -rf ./test ./coverage ./scripts
+deploy:
+  provider: npm
+  email: '$NPM_EMAIL'
+  api_key: '$NPM_TOKEN'
+  skip_cleanup: true
+  on:
+    branch: publish
