@@ -1,6 +1,7 @@
 /**
  * @module storage
  */
+/// <reference path="../typings.d.ts" />
 /**
  * 存储localStorage
  * @param {string} name - 要存储的key
@@ -9,9 +10,9 @@
  * setLocalStorage({a:1});
  * setLocalStorage(123);
  */
-export const setLocalStorage = (name, content) => {
+export const setLocalStorage: Keepsmiling.SetLocalStorage = (name: string, content: any) => {
   if (!name) return;
-  if (typeof content !== "string") {
+  if (typeof content !== 'string') {
     content = JSON.stringify(content);
   }
   window.localStorage.setItem(name, content);
@@ -21,9 +22,9 @@ export const setLocalStorage = (name, content) => {
  * @param {string} name - 想要获取的键名
  * @return {*} 返回结果的真是状态，如果是字符串就返回字符串，如果是json对象就返回js对象
  */
-export const getLocalStorage = name => {
+export const getLocalStorage: Keepsmiling.GetLocalStorage = name => {
   if (!name) return;
-  const value = window.localStorage.getItem(name);
+  const value = window.localStorage.getItem(name) || '';
   try {
     return JSON.parse(value);
   } catch (e) {
@@ -34,7 +35,7 @@ export const getLocalStorage = name => {
  * 删除localStorage
  * @param {string} name key
  */
-export const removeLocalStorage = name => {
+export const removeLocalStorage: Keepsmiling.RemoveLocalStorage = name => {
   if (!name) return;
   window.localStorage.removeItem(name);
 };
@@ -47,11 +48,11 @@ export const removeLocalStorage = name => {
  * @example
  * setCookie('token', 'adsdfdsf', 2);
  */
-export const setCookie = (cname, cvalue, exdays) => {
-  const d = new Date();
+export const setCookie: Keepsmiling.SetCookie = (cname, cvalue, exdays) => {
+  const d: Date = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-  const expires = "expires=" + d.toGMTString();
-  document.cookie = cname + "=" + cvalue + "; " + expires;
+  const expires = 'expires=' + d['toGMTString'];
+  document.cookie = cname + '=' + cvalue + '; ' + expires;
 };
 /**
  * 获取cookie
@@ -61,22 +62,22 @@ export const setCookie = (cname, cvalue, exdays) => {
  * getCookie('token');
  * // returns adsdfdsf
  */
-export const getCookie = cname => {
-  const name = cname + "=";
-  const ca = document.cookie.split(";");
+export const getCookie: Keepsmiling.GetCookie = cname => {
+  const name = cname + '=';
+  const ca = document.cookie.split(';');
   for (let i = 0; i < ca.length; i++) {
     const c = ca[i].trim();
     if (c.indexOf(name) == 0) {
       return c.substring(name.length, c.length);
     }
   }
-  return "";
+  return '';
 };
 
 /**
  * @desc 设置过期时间为之前的值
  * @param {string} name - 需要设置的key
  */
-export const removeCookie = name => {
-  this.setCookie(name, "1", -1);
+export const removeCookie: Keepsmiling.RemoveCookie = name => {
+  setCookie(name, '1', -1);
 };

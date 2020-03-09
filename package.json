@@ -1,22 +1,31 @@
 {
   "name": "keepsmiling",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "utils",
   "keywords": [
     "utils"
   ],
-  "files": ["lib", "dist", "doc"],
-  "main": "dist/keepsmiling.min.js",
+  "files": [
+    "lib",
+    "dist",
+    "doc"
+  ],
+  "main": "lib/index.js",
   "doc": "http://htmlpreview.github.io/?https://github.com/moonbreezee/keepsmiling/blob/master/doc/index.html",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./scripts/webpack.dev.config.js --color",
-    "build": "cross-env NODE_ENV=prod node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color",
-    "dep": "cross-env NODE_ENV=dep node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color",
-    "jsdoc": "node ./node_modules/jsdoc/jsdoc.js lib/index.js -c ./scripts/jsdoc.conf.json -R README.md -r",
-    "test": "npm run dep && node ./node_modules/karma/bin/karma start ./scripts/karma.conf.js",
-    "eslint": "node ./node_modules/eslint/bin/eslint.js -c ./scripts/.eslintrc.js lib/** --fix",
+    "dist": "cross-env NODE_ENV=dep node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color",
+    "build": "babel src -d lib",
+    "test": "npm run dist && node ./node_modules/karma/bin/karma start ./scripts/karma.conf.js",
+    "eslint": "node ./node_modules/eslint/bin/eslint.js -c ./.eslintrc.js src/** --fix",
+    "jsdoc": "node ./node_modules/jsdoc/jsdoc.js src/index.js -c ./scripts/jsdoc.conf.json -R README.md -r",
     "publish": "sh publish.sh && npm run push-master",
     "push-master": "sh push-master.sh"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run test && yarn run eslint"
+    }
   },
   "repository": {
     "type": "git",
@@ -32,30 +41,33 @@
   },
   "homepage": "https://github.com/moonbreezee/keepsmiling",
   "devDependencies": {
-    "babel-core": "^6.22.1",
-    "babel-eslint": "^8.2.3",
-    "babel-loader": "^6.4.1",
-    "babel-plugin-transform-runtime": "^6.22.0",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "cross-env": "^5.1.4",
-    "eslint": "^4.19.1",
-    "eslint-plugin-node": "^6.0.1",
-    "express": "^4.16.4",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@types/jest": "^25.1.4",
+    "@types/mocha": "^7.0.2",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-node": "^11.0.0",
+    "html-webpack-plugin": "^4.0.0-beta.11",
     "jsdoc": "^3.5.5",
-    "karma": "^2.0.2",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-coverage": "^1.1.1",
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.1",
     "karma-mocha": "^1.3.0",
     "karma-mocha-reporter": "^2.2.5",
     "karma-power-assert": "^1.0.0",
-    "mocha": "^5.1.1",
-    "opn": "^5.4.0",
+    "mocha": "^7.1.0",
     "power-assert": "^1.6.1",
-    "webpack": "^3.12.0",
-    "webpack-dev-server": "^2.11.3",
-    "webpack-merge": "^4.1.2",
-    "clean-webpack-plugin": "^1.0.0"
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.1.2"
   }
 }

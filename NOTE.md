@@ -44,11 +44,11 @@ keepsmiling
 ### 常用命令
 
 ```bash
-$ npm run dev 开发模式
+$ npm run dev 开发模式，开发测试函数的使用
 
-$ npm run build 生成可用非压缩文件
+$ npm run dist 生成可用压缩文件，方便web端使用
 
-$ npm run dep 生成可用压缩文件, 用于部署到npm
+$ npm run build 生成编译过的ts/js文件，方便node端通过commonjs|ES6的方式引入
 
 $ npm run test 测试函数
 
@@ -117,8 +117,27 @@ no-useless-escape 不允许在字符串和正则表达式中使用无意义的�
 [github 地址](https://github.com/moonbreezee/keepsmiling.git)
 [npm 上包地址](https://www.npmjs.com/package/keepsmiling)
 
-## 2020-03-08，添加ts支持
+## 2020-03-08，需要添加的功能
 
+### ts 版本
 
+- 修改 js 文件为 ts 语法 = src/string.ts
+- 添加 type 声明文件 = typings.d.ts
 
-- 要支持单独引入，需要打包到dist/
+### 添加单独引入的功能
+
+要支持单独引入，发布的时候，同步发布 lib 文件夹，使用的时候可以使用:
+
+```js
+// 单独引入
+import arrayMax from 'keepsmiling/lib/array/arrayMax';
+// 整体引入，从中获取部分
+import keepsmiling from 'keepsmiling'; // keepsmiling.arrayMax
+const { arrayMax } = keepsmiling;
+```
+
+### 添加提交的时候的检查
+
+husky
+
+### .travis
