@@ -145,3 +145,11 @@ husky
 ## 提交流程
 
 先`sh push-master.sh 版本号`，再`sh publish.sh`。
+
+## 如何测试npm包
+
+然後提交測試版本
+
+`npm publish --tag=beta`
+
+测试beta版本。
