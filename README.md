@@ -7,7 +7,7 @@ tags:
   - jsdoc
   - webpack
 author: https://github.com/moonbreezee
-update: 2020-03-08
+update: 2020-3-8
 ---
 
 生成自己的 js 工具包，包括打包 webpack、测试 mocha、生成文档 jsdoc、发布 npm 包的操作。
