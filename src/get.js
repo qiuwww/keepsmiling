@@ -1,21 +1,40 @@
 /**
  * @module get
  */
-import { isPrime } from "./is.js";
+import { isPrime } from './is.js';
 /**
  * @desc 获取当前页面的url中的查询参数
  * @param {String} key - 需要获取的简值对的key
  * @param {String} str - 需要获取的地址，可以是url也可以是一段字符串
  * @return {Function}
  */
-export const getQueryString = (str = "", key) => {
-  str = str.includes("?") ? str.split("?")[1] : str;
-  const reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+export const getQueryString = (str = '', key) => {
+  str = str.includes('?') ? str.split('?')[1] : str;
+  const reg = new RegExp('(^|&)' + key + '=([^&]*)(&|$)');
   const r = str.match(reg);
   if (r != null) {
     return unescape(r[2]);
   }
   return null;
+};
+
+/**
+ * @description 解析url中的查询字段，返回查询字段构成的对象
+ * @param {string} url 需要解析的字符串
+ * @returns {object} 返回查询字段构成的对象
+ */
+export const getQueryObject = (url) => {
+  var obj = {};
+  var query = url.includes('?') ? url.split('?')[1] : url;
+  var reg = /([^?&=]+)=([^?&=]*)/g;
+  query.replace(reg, function (rs, $1, $2) {
+    var name = decodeURIComponent($1);
+    var val = decodeURIComponent($2);
+    val = String(val);
+    obj[name] = val;
+    return rs;
+  });
+  return obj;
 };
 
 /**
@@ -29,26 +48,26 @@ export const getExplore = () => {
   (s = ua.match(/rv:([\d.]+)\) like gecko/))
     ? (sys.ie = s[1])
     : (s = ua.match(/msie ([\d\.]+)/))
-      ? (sys.ie = s[1])
-      : (s = ua.match(/edge\/([\d\.]+)/))
-        ? (sys.edge = s[1])
-        : (s = ua.match(/firefox\/([\d\.]+)/))
-          ? (sys.firefox = s[1])
-          : (s = ua.match(/(?:opera|opr).([\d\.]+)/))
-            ? (sys.opera = s[1])
-            : (s = ua.match(/chrome\/([\d\.]+)/))
-              ? (sys.chrome = s[1])
-              : (s = ua.match(/version\/([\d\.]+).*safari/))
-                ? (sys.safari = s[1])
-                : 0;
+    ? (sys.ie = s[1])
+    : (s = ua.match(/edge\/([\d\.]+)/))
+    ? (sys.edge = s[1])
+    : (s = ua.match(/firefox\/([\d\.]+)/))
+    ? (sys.firefox = s[1])
+    : (s = ua.match(/(?:opera|opr).([\d\.]+)/))
+    ? (sys.opera = s[1])
+    : (s = ua.match(/chrome\/([\d\.]+)/))
+    ? (sys.chrome = s[1])
+    : (s = ua.match(/version\/([\d\.]+).*safari/))
+    ? (sys.safari = s[1])
+    : 0;
   // 根据关系进行判断
-  if (sys.ie) return "IE: " + sys.ie;
-  if (sys.edge) return "EDGE: " + sys.edge;
-  if (sys.firefox) return "Firefox: " + sys.firefox;
-  if (sys.chrome) return "Chrome: " + sys.chrome;
-  if (sys.opera) return "Opera: " + sys.opera;
-  if (sys.safari) return "Safari: " + sys.safari;
-  return "Unkonwn";
+  if (sys.ie) return 'IE: ' + sys.ie;
+  if (sys.edge) return 'EDGE: ' + sys.edge;
+  if (sys.firefox) return 'Firefox: ' + sys.firefox;
+  if (sys.chrome) return 'Chrome: ' + sys.chrome;
+  if (sys.opera) return 'Opera: ' + sys.opera;
+  if (sys.safari) return 'Safari: ' + sys.safari;
+  return 'Unkonwn';
 };
 
 /**
@@ -57,16 +76,16 @@ export const getExplore = () => {
  */
 export const getBrowserOS = () => {
   const userAgent =
-    ("navigator" in global && "userAgent" in navigator && navigator.userAgent.toLowerCase()) || "";
+    ('navigator' in global && 'userAgent' in navigator && navigator.userAgent.toLowerCase()) || '';
   const appVersion =
-    ("navigator" in global && "appVersion" in navigator && navigator.appVersion.toLowerCase()) ||
-    "";
-  if (/mac/i.test(appVersion)) return "MacOSX";
-  if (/win/i.test(appVersion)) return "windows";
-  if (/linux/i.test(appVersion)) return "linux";
-  if (/iphone/i.test(userAgent) || /ipad/i.test(userAgent) || /ipod/i.test(userAgent)) "ios";
-  if (/android/i.test(userAgent)) return "android";
-  if (/win/i.test(appVersion) && /phone/i.test(userAgent)) return "windowsPhone";
+    ('navigator' in global && 'appVersion' in navigator && navigator.appVersion.toLowerCase()) ||
+    '';
+  if (/mac/i.test(appVersion)) return 'MacOSX';
+  if (/win/i.test(appVersion)) return 'windows';
+  if (/linux/i.test(appVersion)) return 'linux';
+  if (/iphone/i.test(userAgent) || /ipad/i.test(userAgent) || /ipod/i.test(userAgent)) 'ios';
+  if (/android/i.test(userAgent)) return 'android';
+  if (/win/i.test(appVersion) && /phone/i.test(userAgent)) return 'windowsPhone';
 };
 
 /**
@@ -95,10 +114,10 @@ export const getScrollPos = (el = window) => ({
  * (logged): timeTaken: 0.02099609375ms
  */
 
-export const timeTaken = callback => {
-  console.time("timeTaken");
+export const timeTaken = (callback) => {
+  console.time('timeTaken');
   const r = callback();
-  console.timeEnd("timeTaken");
+  console.timeEnd('timeTaken');
   return r;
 };
 
@@ -107,8 +126,8 @@ export const timeTaken = callback => {
  * @param {number} rate - 当前的评级，从0到5
  * @return {string} 当前的评级
  */
-export const getRate = rate => {
-  return "★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate);
+export const getRate = (rate) => {
+  return '★★★★★☆☆☆☆☆'.slice(5 - rate, 10 - rate);
 };
 
 /**
@@ -119,7 +138,7 @@ export const turnToStackoverflow = (func, context) => {
   try {
     func.call(context);
   } catch (e) {
-    window.location.href = "http://stackoverflow.com/search?q=[js]+" + e.message;
+    window.location.href = 'http://stackoverflow.com/search?q=[js]+' + e.message;
   }
 };
 
@@ -136,24 +155,24 @@ export const turnToStackoverflow = (func, context) => {
 export function parseUrl(url) {
   const result = {};
   const keys = [
-    "href",
-    "origin",
-    "protocol",
-    "host",
-    "hostname",
-    "port",
-    "pathname",
-    "search",
-    "hash",
+    'href',
+    'origin',
+    'protocol',
+    'host',
+    'hostname',
+    'port',
+    'pathname',
+    'search',
+    'hash',
   ];
   const regexp = /(([^:]+:)\/\/(([^:\/\?#]+)(:\d+)?))(\/[^?#]*)?(\?[^#]*)?(#.*)?/;
   const match = regexp.exec(url);
   if (match) {
     for (let i = keys.length - 1; i >= 0; i--) {
-      result[keys[i]] = match[i] ? match[i] : "";
+      result[keys[i]] = match[i] ? match[i] : '';
     }
     // 单独处理port
-    result["port"] = result["port"].substr(1);
+    result['port'] = result['port'].substr(1);
   }
   return result;
 }
@@ -185,10 +204,10 @@ export function getPrime(str, end) {
  * @param {string} url 接受相对地址
  */
 
-export const getAbsoluteUrl = (function() {
+export const getAbsoluteUrl = (function () {
   let a;
-  return function(url) {
-    if (!a) a = document.createElement("a");
+  return function (url) {
+    if (!a) a = document.createElement('a');
     a.href = url;
 
     return a.href;
