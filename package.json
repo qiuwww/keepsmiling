@@ -11,7 +11,7 @@
     "src"
   ],
   "main": "lib/index.js",
-  "doc": "http://htmlpreview.github.io/?https://github.com/moonbreezee/keepsmiling/blob/master/doc/index.html",
+  "doc": "http://htmlpreview.github.io/?https://github.com/qiuwww/keepsmiling/blob/master/doc/index.html",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./scripts/webpack.dev.config.js --color",
     "dist": "cross-env NODE_ENV=dep node ./node_modules/webpack/bin/webpack.js --config ./scripts/webpack.build.config.js --color",
@@ -29,17 +29,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/moonbreezee/keepsmiling.git"
+    "url": "https://github.com/qiuwww/keepsmiling.git"
   },
-  "author": "moonbreezee",
+  "author": "qiuwww",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/moonbreezee/keepsmiling/issues"
+    "url": "https://github.com/qiuwww/keepsmiling/issues"
   },
   "engines": {
     "node": ">=4.0.0"
   },
-  "homepage": "https://github.com/moonbreezee/keepsmiling",
+  "homepage": "https://github.com/qiuwww/keepsmiling",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/plugin-transform-runtime": "^7.8.3",

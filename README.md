@@ -6,13 +6,13 @@ tags:
   - eslint
   - jsdoc
   - webpack
-author: https://github.com/moonbreezee
+author: https://github.com/qiuwww
 update: 2020-3-8
 ---
 
 生成自己的 js 工具包，包括打包 webpack、测试 mocha、生成文档 jsdoc、发布 npm 包的操作。
 
-[仓库 github 地址](https://github.com/moonbreezee/keepsmiling.git)
+[仓库 github 地址](https://github.com/qiuwww/keepsmiling.git)
 
 ## Installation
 
@@ -47,7 +47,7 @@ const keepsmiling = require("keepsmiling"); // CommonJS
 
 ## 构建说明
 
-[构建说明](https://github.com/moonbreezee/keepsmiling/blob/master/NOTES.md)
+[构建说明](https://github.com/qiuwww/keepsmiling/blob/master/NOTES.md)
 
 ## 主要方法如下
 
@@ -109,4 +109,4 @@ const keepsmiling = require("keepsmiling"); // CommonJS
 
 ## 查看文档
 
-[jsdoc 生成的文档](https://htmlpreview.github.io/?https://github.com/moonbreezee/keepsmiling/blob/master/doc/index.html)
+[jsdoc 生成的文档](https://htmlpreview.github.io/?https://github.com/qiuwww/keepsmiling/blob/master/doc/index.html)

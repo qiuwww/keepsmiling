@@ -18,7 +18,7 @@ node 需要 6.0 以上版本。
 
 ```bash
 
-$ clone https://github.com/moonbreezee/keepsmiling.git
+$ clone https://github.com/qiuwww/keepsmiling.git
 
 $ cd keepsmiling
 
@@ -92,7 +92,7 @@ npm 包实际是一个存档文件，即一个目录直接打包为.zip 或 tar.
 ## JSDoc 生成文档的说明
 
 - [JSDoc 官网文档](https://www.css88.com/doc/jsdoc/index.html)
-- [在线预览文档](http://htmlpreview.github.io/?https://github.com/moonbreezee/keepsmiling/blob/master/doc/index.html)
+- [在线预览文档](http://htmlpreview.github.io/?https://github.com/qiuwww/keepsmiling/blob/master/doc/index.html)
 
 ## eslint 配置
 
@@ -114,7 +114,7 @@ no-useless-escape 不允许在字符串和正则表达式中使用无意义的�
 
 后续还要不断的完善
 
-[github 地址](https://github.com/moonbreezee/keepsmiling.git)
+[github 地址](https://github.com/qiuwww/keepsmiling.git)
 [npm 上包地址](https://www.npmjs.com/package/keepsmiling)
 
 ## 2020-03-08，需要添加的功能
