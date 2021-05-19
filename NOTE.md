@@ -68,6 +68,8 @@ npm login
 npm publish
 ```
 
+###
+
 ### npm 包说明
 
 npm 包实际是一个存档文件，即一个目录直接打包为.zip 或 tar.gz 格式的文件，安装后解压还原为目录。
@@ -146,10 +148,10 @@ husky
 
 先`sh push-master.sh 版本号`，再`sh publish.sh`。
 
-## 如何测试npm包
+## 如何测试 npm 包
 
 然後提交測試版本
 
 `npm publish --tag=beta`
 
-测试beta版本。
+测试 beta 版本。

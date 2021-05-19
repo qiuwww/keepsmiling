@@ -1,6 +1,6 @@
 {
   "name": "keepsmiling",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "utils",
   "keywords": [
     "utils"
@@ -41,6 +41,7 @@
   },
   "homepage": "https://github.com/qiuwww/keepsmiling",
   "devDependencies": {
+    "@babel/compat-data": "^7.14.0",
     "@babel/core": "^7.8.7",
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.8.7",
